@@ -14,6 +14,10 @@ angular.module('gservice', [])
         var selectedLat = 39.50;
         var selectedLong = -98.35;
 
+        // Handling Clicks and location selection
+        googleMapService.clickLat  = 0;
+        googleMapService.clickLong = 0;
+
         // Functions
         // --------------------------------------------------------------
         // Refresh the Map with new data. Function will take new latitude and longitude coordinates.
@@ -117,6 +121,32 @@ var initialize = function(latitude, longitude) {
         icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
     });
     lastMarker = marker;
+
+    // Bouncing Red Marker Logic
+// ...
+
+// Function for moving to a selected location
+map.panTo(new google.maps.LatLng(latitude, longitude));
+
+// Clicking on the Map moves the bouncing red marker
+google.maps.event.addListener(map, 'click', function(e){
+    var marker = new google.maps.Marker({
+        position: e.latLng,
+        animation: google.maps.Animation.BOUNCE,
+        map: map,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+    });
+
+    // When a new spot is selected, delete the old red bouncing marker
+    if(lastMarker){
+        lastMarker.setMap(null);
+    }
+
+    // Create a new red bouncing marker and move to it
+    lastMarker = marker;
+    map.panTo(marker.position);
+});
+
 
 };
 
