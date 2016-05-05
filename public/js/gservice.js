@@ -1,6 +1,6 @@
 // Creates the gservice factory. This will be the primary means by which we interact with Google Maps
 angular.module('gservice', [])
-    .factory('gservice', function($http){
+ .factory('gservice', function($rootScope, $http){
 
         // Initialize Variables
         // -------------------------------------------------------------
@@ -39,6 +39,9 @@ angular.module('gservice', [])
                 // Then initialize the map.
                 initialize(latitude, longitude);
             }).error(function(){});
+
+
+
         };
 
         // Private Inner Functions
@@ -73,6 +76,7 @@ angular.module('gservice', [])
                     age: user.age,
                     favlang: user.favlang
             });
+
         }
         // location is now an array populated with records in Google Maps format
         return locations;
@@ -122,6 +126,8 @@ var initialize = function(latitude, longitude) {
     });
     lastMarker = marker;
 
+
+
     // Bouncing Red Marker Logic
 // ...
 
@@ -145,7 +151,13 @@ google.maps.event.addListener(map, 'click', function(e){
     // Create a new red bouncing marker and move to it
     lastMarker = marker;
     map.panTo(marker.position);
+    // Update Broadcasted Variable (lets the panels know to change their lat, long values)
+googleMapService.clickLat = marker.getPosition().lat();
+googleMapService.clickLong = marker.getPosition().lng();
+$rootScope.$broadcast("clicked");
 });
+
+
 
 
 };
