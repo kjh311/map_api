@@ -11,8 +11,8 @@ angular.module('gservice', [])
         var locations = [];
 
         // Selected Location (initialize to center of America)
-        var selectedLat = 39.50;
-        var selectedLong = -98.35;
+        var selectedLat = 34.293;
+        var selectedLong = -118.463;
 
         // Handling Clicks and location selection
         googleMapService.clickLat  = 0;
@@ -58,10 +58,10 @@ angular.module('gservice', [])
 
                 // Create popup windows for each record
                 var  contentString =
-                    '<p><b>Username</b>: ' + user.username +
-                    '<br><b>Age</b>: ' + user.age +
-                    '<br><b>Gender</b>: ' + user.gender +
-                    '<br><b>Favorite Language</b>: ' + user.favlang +
+                    '<p><b>Name</b>: ' + user.name +
+                    '<br><b>Description</b>: ' + user.description +
+
+
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -72,9 +72,9 @@ angular.module('gservice', [])
                         maxWidth: 320
                     }),
                     username: user.username,
-                    gender: user.gender,
-                    age: user.age,
-                    favlang: user.favlang
+                    gender: user.description,
+                    // age: user.age,
+                    // favlang: user.favlang
             });
 
         }
@@ -93,7 +93,7 @@ var initialize = function(latitude, longitude) {
 
         // Create a new map and place in the index.html page
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 3,
+            zoom: 10,
             center: myLatLng
         });
     }
@@ -104,7 +104,7 @@ var initialize = function(latitude, longitude) {
             position: n.latlon,
             map: map,
             title: "Big Map",
-            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            icon: "http://www.weridesideways.com/assets/img/icons/wrs/icon_wrs_skate.png",
         });
 
         // For each marker created, add a listener that checks for clicks
@@ -122,7 +122,7 @@ var initialize = function(latitude, longitude) {
         position: initialLocation,
         animation: google.maps.Animation.BOUNCE,
         map: map,
-        icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+        icon: 'https://www.teawamutu.nz/town/2/images/icons/iconMe_N.png'
     });
     lastMarker = marker;
 
@@ -140,7 +140,7 @@ google.maps.event.addListener(map, 'click', function(e){
         position: e.latLng,
         animation: google.maps.Animation.BOUNCE,
         map: map,
-        icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+        icon: 'https://www.teawamutu.nz/town/2/images/icons/iconMe_N.png'
     });
 
     // When a new spot is selected, delete the old red bouncing marker

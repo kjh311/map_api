@@ -14,8 +14,8 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
     var long = 0;
 
     // Set initial coordinates to the center of the US
-    $scope.formData.latitude = 39.500;
-    $scope.formData.longitude = -98.350;
+    $scope.formData.latitude = 33.898;
+    $scope.formData.longitude = -118.015;
 
     // Get User's actual coordinates based on HTML5 at window load
     geolocation.getLocation().then(function(data){
@@ -56,9 +56,9 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 
         // Grabs all of the text box fields
         var userData = {
-            username: $scope.formData.username,
-            gender: $scope.formData.gender,
-            age: $scope.formData.age,
+            name: $scope.formData.name,
+            description: $scope.formData.description,
+
             favlang: $scope.formData.favlang,
             location: [$scope.formData.longitude, $scope.formData.latitude],
             htmlverified: $scope.formData.htmlverified
@@ -69,9 +69,9 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
             .success(function (data) {
 
                 // Once complete, clear the form (except location)
-                $scope.formData.username = "";
-                $scope.formData.gender = "";
-                $scope.formData.age = "";
+                $scope.formData.name = "";
+                $scope.formData.description = "";
+                // $scope.formData.age = "";
                 $scope.formData.favlang = "";
 
             })

@@ -3,7 +3,7 @@
 <html class="no-js" ng-app="meanMapApp">
 <head>
     <meta charset="utf-8">
-    <title>Scotch MEAN Map</title>
+    <title>Out and About</title>
     <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
@@ -29,10 +29,10 @@
 <div class="container">
     <div class="header">
         <ul class="nav nav-pills pull-right">
-            <li active><a href="">Join the Team</a></li>
-            <li disabled><a href="">Find Teammates</a></li>
+            <li active><a href="">Favorites</a></li>
+            <li disabled><a href="">Login</a></li>
         </ul>
-        <h3 class="text-muted">The Scotch MEAN MapApp</h3>
+        <h3 class="text-muted">Out and About</h3>
     </div>
     <!-- Map and Side Panel -->
     <div class="row content">
@@ -49,7 +49,7 @@
             <div class="panel panel-default">
                 <!-- Panel Title -->
                 <div class="panel-heading">
-                    <h2 class="panel-title text-center">Join the Scotch Team! <span class="glyphicon glyphicon-map-marker"></span></h2>
+                    <h2 class="panel-title text-center">Add New Activity Location! <span class="glyphicon glyphicon-map-marker"></span></h2>
                 </div>
                 <!-- Panel Body -->
                 <div class="panel-body">
@@ -57,10 +57,18 @@
                     <form name ="addForm" novalidate>
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                         <div class="form-group">
-                            <label for="username">Username <span class="badge">All fields required</span></label>
-                            <input type="text" class="form-control" id="username" placeholder="OldandGold" ng-model="formData.username" required>
+                            <label for="username">Name of Location <span class="badge">All fields required</span></label>
+                            <input type="text" class="form-control" id="name" placeholder="WickedSk8Park" ng-model="formData.name" required>
                         </div>
-                        <label class="radio control-label">Gender</label>
+
+                        <div class="form-group">
+                            <label for="username">Description</label>
+                            <textarea rows="4" cols="50"  type="text" class="form-control" id="description" placeholder="Please enter a description" ng-model="formData.description" required>
+
+                            </textarea>
+                        </div>
+
+                   <!--      <label class="radio control-label">Gender</label>
                         <div class="radio">
                             <label>
                                 <input type="radio" name="optionsRadios" id="radiomale" value="Male" ng-model="formData.gender">
@@ -86,7 +94,10 @@
                         <div class="form-group">
                             <label for="language">Favorite Language</label>
                             <input type="text" class="form-control" id="language" placeholder="Fortran" ng-model="formData.favlang" required>
-                        </div>
+                        </div> -->
+
+
+
                         <div class="form-group">
                             <label for="latitude">Latitude</label>
                             <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
@@ -110,8 +121,8 @@
     <hr/>
     <!-- Footer -->
     <div class="footer">
-        <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Ahmed Haque for Scotch IO -
-            <a href="https://scotch.io/">App Tutorial</a> | <a href="https://github.com/afhaque/MeanMapAppV2.0">Github Repo</a></p>
+        <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Kevin Huelsmann
+          <!--   <a href="https://scotch.io/">App Tutorial</a> | <a href="https://github.com/afhaque/MeanMapAppV2.0">Github Repo</a></p> -->
     </div>
 </div>
 </body>
