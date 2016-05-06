@@ -11,8 +11,8 @@ angular.module('gservice', [])
         var locations = [];
 
         // Selected Location (initialize to center of America)
-        var selectedLat = 34.293;
-        var selectedLong = -118.463;
+        var selectedLat = 36.598;
+        var selectedLong = -99.141;
 
         // Handling Clicks and location selection
         googleMapService.clickLat  = 0;
@@ -58,9 +58,9 @@ angular.module('gservice', [])
 
                 // Create popup windows for each record
                 var  contentString =
-                    '<p><b>Name</b>: ' + user.name +
-                    '<br><b>Description</b>: ' + user.description +
-                    '</br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">Directions</a>'
+                    '<p><h3> ' + user.name + '</h3>' +
+                    ' ' + user.description +
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">Directions</a>'
                     // '<button type="button" class="btn btn-primary">Directions</button>'
                     '</p>';
 
@@ -100,11 +100,13 @@ var initialize = function(latitude, longitude) {
 
     // Loop through each location in the array and place a marker
     locations.forEach(function(n, i){
+        var icon = "http://cdn.shopify.com/s/files/1/0262/6741/files/skateboard_icon__thumb_ad7dd2c2-3f4e-48cd-9803-725af55aabd8_small.png?17131587700476465343"
         var marker = new google.maps.Marker({
             position: n.latlon,
+            animation: google.maps.Animation.DROP,
             map: map,
             title: "Big Map",
-            icon: "http://www.weridesideways.com/assets/img/icons/wrs/icon_wrs_skate.png",
+            icon: icon,
         });
 
         // For each marker created, add a listener that checks for clicks
@@ -120,7 +122,7 @@ var initialize = function(latitude, longitude) {
     var initialLocation = new google.maps.LatLng(latitude, longitude);
     var marker = new google.maps.Marker({
         position: initialLocation,
-        animation: google.maps.Animation.BOUNCE,
+        animation: google.maps.Animation.DROP,
         map: map,
         icon: 'https://www.teawamutu.nz/town/2/images/icons/iconMe_N.png'
     });
@@ -136,11 +138,12 @@ map.panTo(new google.maps.LatLng(latitude, longitude));
 
 // Clicking on the Map moves the bouncing red marker
 google.maps.event.addListener(map, 'click', function(e){
+
     var marker = new google.maps.Marker({
         position: e.latLng,
-        animation: google.maps.Animation.BOUNCE,
+        animation: google.maps.Animation.DROP,
         map: map,
-        icon: 'https://www.teawamutu.nz/town/2/images/icons/iconMe_N.png'
+        icon: 'http://www.westcoastfish.co.uk/wp-content/uploads/2013/05/Map-Marker.png'
     });
 
     // When a new spot is selected, delete the old red bouncing marker

@@ -26,13 +26,57 @@
     <script src="js/gservice.js"></script>
 </head>
 <body ng-controller="addCtrl">
+
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+
+
 <div class="container">
     <div class="header">
-        <ul class="nav nav-pills pull-right">
+       <!--  <ul class="nav nav-pills pull-right">
             <li active><a href="">Favorites</a></li>
             <li disabled><a href="">Login</a></li>
-        </ul>
-        <h3 class="text-muted">Out and About</h3>
+        </ul> -->
+        <h3 class="text-muted"></h3>
     </div>
     <!-- Map and Side Panel -->
     <div class="row content">
@@ -44,6 +88,48 @@
         <div class="col-md-7">
             <div id="map" style="width:645px; height:645px"></div>
         </div>
+
+        <!-- checkboxes -->
+        <div class="col-md-5">
+            <div class="panel panel-default ">
+                <!-- Panel Title -->
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center">Choose Your Activity!</h2>
+                </div>
+                    <div class="checkbox container ">
+                        <label>
+                            <input type="checkbox" value="skateboard" class="check" id="checkbox_skate">
+                            Skateboarding
+                        </label>
+                    </div>
+
+                    <div class="checkbox container ">
+                        <label>
+                            <input type="checkbox" value="scuba" class="check" id="checkbox_scuba">
+                            Scuba Diving
+                        </label>
+                    </div>
+
+                    <div class="checkbox container ">
+                        <label>
+                            <input type="checkbox" value="hiking" class="check" id="checkbox_hiking">
+                            Hiking
+                        </label>
+                    </div>
+
+                     <div class="checkbox container ">
+                        <label>
+                            <input type="checkbox" value="camping" class="check" id="checkbox_camping">
+                            Camping
+                        </label>
+                    </div>
+
+
+</div>
+</div>
+
+
+
         <!-- Side Panel -->
         <div class="col-md-5">
             <div class="panel panel-default">
@@ -56,13 +142,14 @@
                     <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
                     <form name ="addForm" novalidate>
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
+                        <p><b>1. Click the location on the map of new activity or ignore to use current location.</b></p>
                         <div class="form-group">
-                            <label for="username">Name of Location <span class="badge">All fields required</span></label>
-                            <input type="text" class="form-control" id="name" placeholder="WickedSk8Park" ng-model="formData.name" required>
+                            <label for="username">2. Name of Location <span class="badge">Required</span></label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name of Location" ng-model="formData.name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="username">Description</label>
+                            <label for="username">3. Description  <span class="badge">Required</span></label>
                             <textarea rows="4" cols="50"  type="text" class="form-control" id="description" placeholder="Please enter a description" ng-model="formData.description" required>
 
                             </textarea>
@@ -122,7 +209,7 @@
     <!-- Footer -->
     <div class="footer">
         <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Kevin Huelsmann
-          <!--   <a href="https://scotch.io/">App Tutorial</a> | <a href="https://github.com/afhaque/MeanMapAppV2.0">Github Repo</a></p> -->
+
     </div>
 </div>
 </body>

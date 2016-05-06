@@ -30,4 +30,4 @@ UserSchema.pre('save', function(next){
 UserSchema.index({location: '2dsphere'});
 
 // Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "scotch-users"
-module.exports = mongoose.model('scotch-user', UserSchema);
+module.exports = mongoose.model('fuck-face', UserSchema);
