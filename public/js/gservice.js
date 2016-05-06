@@ -60,8 +60,8 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><b>Name</b>: ' + user.name +
                     '<br><b>Description</b>: ' + user.description +
-
-
+                    '</br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">Directions</a>'
+                    // '<button type="button" class="btn btn-primary">Directions</button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
