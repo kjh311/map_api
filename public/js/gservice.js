@@ -56,7 +56,8 @@ angular.module('gservice', [])
             // Loop through all of the JSON entries provided in the response
             for(var i= 0; i < response.length; i++) {
                 var user = response[i];
-
+                username = user.name;
+                description = user.description;
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h3> ' + user.name + '</h3>' +
@@ -66,6 +67,11 @@ angular.module('gservice', [])
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
+
+                // This is where to filter which markers get shown
+                if(username === "Venice Skate Park"){
+
+
                 locations.push({
                     latlon: new google.maps.LatLng(user.location[1], user.location[0]),
                     message: new google.maps.InfoWindow({
@@ -75,9 +81,11 @@ angular.module('gservice', [])
                     username: user.username,
                     gender: user.description,
             });
+                }
 
         }
         // location is now an array populated with records in Google Maps format
+
         return locations;
     };
 
@@ -100,6 +108,7 @@ var initialize = function(latitude, longitude) {
     // Loop through each location in the array and place a marker
     locations.forEach(function(n, i){
         var icon = "http://cdn.shopify.com/s/files/1/0262/6741/files/skateboard_icon__thumb_ad7dd2c2-3f4e-48cd-9803-725af55aabd8_small.png?17131587700476465343"
+        console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
             animation: google.maps.Animation.DROP,
