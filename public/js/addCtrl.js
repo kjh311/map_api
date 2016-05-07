@@ -51,7 +51,44 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 // ...
 
 
-    // Creates a new user based on the form fields
+//     // Creates a new user based on the form fields
+//     $scope.createUser = function() {
+
+//         // Grabs all of the text box fields
+//         var userData = {
+//             name: $scope.formData.name,
+//             description: $scope.formData.description,
+
+//             favlang: $scope.formData.favlang,
+//             location: [$scope.formData.longitude, $scope.formData.latitude],
+//             htmlverified: $scope.formData.htmlverified
+//         };
+
+//         // Saves the user data to the db
+//         $http.post('/users', userData)
+//             .success(function (data) {
+
+//                 // Once complete, clear the form (except location)
+//                 $scope.formData.name = "";
+//                 $scope.formData.description = "";
+//                 // $scope.formData.age = "";
+//                 $scope.formData.favlang = "";
+
+//             })
+//             .error(function (data) {
+//                 console.log('Error: ' + data);
+//             });
+
+//             // Logic for Clearing the FOrm
+// // ...
+
+// // Refresh the map with new data
+// gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
+
+//     };
+
+
+        // Creates a new scuba based on the form fields
     $scope.createScuba = function() {
 
         // Grabs all of the text box fields
@@ -67,12 +104,11 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
         // Saves the user data to the db
         $http.post('/scubas', scubaData)
             .success(function (data) {
-
+                console.log("function post scuba to db addCtrl.js");
                 // Once complete, clear the form (except location)
                 $scope.formData.name = "";
                 $scope.formData.description = "";
-                // $scope.formData.age = "";
-                $scope.formData.favlang = "";
+
 
             })
             .error(function (data) {

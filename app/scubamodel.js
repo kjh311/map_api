@@ -3,7 +3,7 @@
 var mongoose    = require('mongoose');
 var Schema      = mongoose.Schema;
 
-// Creates a User Schema. This will be the basis of how user data is stored in the db
+// Creates a Scuba Schema. This will be the basis of how scuba data is stored in the db
 var ScubaSchema = new Schema({
     name: {type: String, required: true},
     description: {type: String, required: true},
