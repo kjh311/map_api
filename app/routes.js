@@ -18,6 +18,7 @@ module.exports = function(app) {
 
             // If no errors are found, it responds with a JSON of all users
             res.json(users);
+            console.log('get all users from db routes.js');
         });
     });
 
@@ -31,6 +32,7 @@ module.exports = function(app) {
 
         // New User is saved in the db.
         newuser.save(function(err){
+            console.log('new user posted to db routes.js');
             if(err)
                 res.send(err);
 

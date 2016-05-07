@@ -35,9 +35,10 @@ angular.module('gservice', [])
 
                 // Convert the results into Google Map Format
                 locations = convertToMapPoints(response);
-
+                console.log('users gotten from db gservice.js');
                 // Then initialize the map.
                 initialize(latitude, longitude);
+                // console.log('innitialize map gservice.js');
             }).error(function(){});
 
 
@@ -48,7 +49,7 @@ angular.module('gservice', [])
         // --------------------------------------------------------------
         // Convert a JSON of users into map points
         var convertToMapPoints = function(response){
-
+            console.log('convert db users into map icons gservice.js');
             // Clear the locations holder
             var locations = [];
 
@@ -73,8 +74,6 @@ angular.module('gservice', [])
                     }),
                     username: user.username,
                     gender: user.description,
-                    // age: user.age,
-                    // favlang: user.favlang
             });
 
         }
@@ -84,7 +83,7 @@ angular.module('gservice', [])
 
 // Initializes the map
 var initialize = function(latitude, longitude) {
-
+    console.log('initialize map gservice.js');
     // Uses the selected lat, long as starting point
     var myLatLng = {lat: selectedLat, lng: selectedLong};
 

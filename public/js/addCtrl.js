@@ -38,7 +38,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
     // ----------------------------------------------------------------------------
     // Get coordinates based on mouse click. When a click event is detected....
     $rootScope.$on("clicked", function(){
-
+        console.log('icon moved addCtrl.js');
     // Run the gservice functions associated with identifying coordinates
     $scope.$apply(function(){
     $scope.formData.latitude = parseFloat(gservice.clickLat).toFixed(3);
@@ -67,6 +67,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
         // Saves the user data to the db
         $http.post('/users', userData)
             .success(function (data) {
+                console.log('new user created addCtrl.js');
 
                 // Once complete, clear the form (except location)
                 $scope.formData.name = "";
