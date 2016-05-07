@@ -9,6 +9,10 @@ angular.module('gservice', [])
 
         // Array of locations obtained from API calls
         var locations = [];
+        var skateboard_locations = [];
+        var scuba_locations = [];
+        var hiking_locations = [];
+        var camping_locations = [];
 
         // Selected Location (initialize to center of America)
         var selectedLat = 36.598;
@@ -25,12 +29,17 @@ angular.module('gservice', [])
 
             // Clears the holding array of locations
             locations = [];
+            var skateboard_locations = [];
+            var scuba_locations = [];
+            var hiking_locations = [];
+            var camping_locations = [];
 
             // Set the selected lat and long equal to the ones provided on the refresh() call
             selectedLat = latitude;
             selectedLong = longitude;
 
             // Perform an AJAX call to get all of the records in the db.
+            // USER
             $http.get('/users').success(function(response){
 
                 // Convert the results into Google Map Format
@@ -40,7 +49,15 @@ angular.module('gservice', [])
                 initialize(latitude, longitude);
             }).error(function(){});
 
+            // SCUBA
+            $http.get('/scubas').success(function(response){
 
+                // Convert the results into Google Map Format
+                scuba_locations = convertToMapPoints(response);
+
+                // Then initialize the map.
+                initialize(latitude, longitude);
+            }).error(function(){});
 
         };
 
@@ -51,6 +68,7 @@ angular.module('gservice', [])
 
             // Clear the locations holder
             var locations = [];
+            var scuba_locations = [];
 
             // Loop through all of the JSON entries provided in the response
             for(var i= 0; i < response.length; i++) {
@@ -72,7 +90,7 @@ angular.module('gservice', [])
                         maxWidth: 320
                     }),
                     username: user.username,
-                    gender: user.description,
+                    description: user.description,
                     // age: user.age,
                     // favlang: user.favlang
             });

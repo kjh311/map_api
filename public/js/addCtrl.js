@@ -52,10 +52,10 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 
 
     // Creates a new user based on the form fields
-    $scope.createUser = function() {
+    $scope.createScuba = function() {
 
         // Grabs all of the text box fields
-        var userData = {
+        var scubaData = {
             name: $scope.formData.name,
             description: $scope.formData.description,
 
@@ -65,7 +65,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
         };
 
         // Saves the user data to the db
-        $http.post('/users', userData)
+        $http.post('/scubas', scubaData)
             .success(function (data) {
 
                 // Once complete, clear the form (except location)
