@@ -40,20 +40,20 @@ angular.module('gservice', [])
 
             // Perform an AJAX call to get all of the records in the db.
             // USER
-            $http.get('/users').success(function(response){
+            // $http.get('/users').success(function(response){
 
-                // Convert the results into Google Map Format
-                locations = convertToMapPoints(response);
+            //     // Convert the results into Google Map Format
+            //     locations = convertUserToMapPoints(response);
 
-                // Then initialize the map.
-                initialize(latitude, longitude);
-            }).error(function(){});
+            //     // Then initialize the map.
+            //     initialize(latitude, longitude);
+            // }).error(function(){});
 
             // SCUBA
             $http.get('/scubas').success(function(response){
 
                 // Convert the results into Google Map Format
-                scuba_locations = convertToMapPoints(response);
+                scuba_locations = convertScubaToMapPoints(response);
 
                 // Then initialize the map.
                 initialize(latitude, longitude);
@@ -61,14 +61,15 @@ angular.module('gservice', [])
 
         };
 
-        // Private Inner Functions
+
+        // USER. Private Inner Functions
         // --------------------------------------------------------------
         // Convert a JSON of users into map points
-        var convertToMapPoints = function(response){
+        var convertUserToMapPoints = function(response){
 
             // Clear the locations holder
             var locations = [];
-            var scuba_locations = [];
+
 
             // Loop through all of the JSON entries provided in the response
             for(var i= 0; i < response.length; i++) {
@@ -100,6 +101,42 @@ angular.module('gservice', [])
         return locations;
     };
 
+    // SCUBA
+            // Convert a JSON of users into map points
+        var convertScubaToMapPoints = function(response){
+
+            // Clear the locations holder
+            var scuba_locations = [];
+
+
+            // Loop through all of the JSON entries provided in the response
+            for(var i= 0; i < response.length; i++) {
+                var scuba = response[i];
+
+                // Create popup windows for each record
+                var  contentString =
+                    '<p><h3> ' + scuba.name + '</h3>' +
+                    ' ' + scuba.description +
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ scuba.location[1] + ',' + scuba.location[0] + '" target="blank">Directions</a>'
+                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</p>';
+
+                // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
+                scuba_locations.push({
+                    latlon: new google.maps.LatLng(scuba.location[1], scuba.location[0]),
+                    message: new google.maps.InfoWindow({
+                        content: contentString,
+                        maxWidth: 320
+                    }),
+                    scubaname: scuba.scubaname,
+                    description: scuba.description,
+            });
+
+        }
+        // location is now an array populated with records in Google Maps format
+        return scuba_locations;
+    };
+
 // Initializes the map
 var initialize = function(latitude, longitude) {
 
@@ -116,7 +153,7 @@ var initialize = function(latitude, longitude) {
         });
     }
 
-    // Loop through each location in the array and place a marker
+    // Loop through each USER location in the array and place a marker
     locations.forEach(function(n, i){
         var icon = "http://cdn.shopify.com/s/files/1/0262/6741/files/skateboard_icon__thumb_ad7dd2c2-3f4e-48cd-9803-725af55aabd8_small.png?17131587700476465343"
         var marker = new google.maps.Marker({
@@ -133,6 +170,26 @@ var initialize = function(latitude, longitude) {
             // When clicked, open the selected marker's message
             currentSelectedMarker = n;
             n.message.open(map, marker);
+        });
+    });
+
+    // SCUBA
+    scuba_locations.forEach(function(n, i){
+        var icon = "http://arctouch.com/wp-content/uploads/2015/02/scuba_icon_v2.png"
+        var scuba_marker = new google.maps.Marker({
+            position: n.latlon,
+            animation: google.maps.Animation.DROP,
+            map: map,
+            title: "Big Map",
+            icon: icon,
+        });
+
+        // For each marker created, add a listener that checks for clicks
+        google.maps.event.addListener(scuba_marker, 'click', function(e){
+
+            // When clicked, open the selected marker's message
+            currentSelectedMarker = n;
+            n.message.open(map, scuba_marker);
         });
     });
 

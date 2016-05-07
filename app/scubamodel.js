@@ -27,4 +27,4 @@ ScubaSchema.pre('save', function(next){
 ScubaSchema.index({location: '2dsphere'});
 
 // Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "db_name"
-module.exports = mongoose.model('fuck-face', ScubaSchema);
+module.exports = mongoose.model('scuba', ScubaSchema);

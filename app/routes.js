@@ -1,6 +1,7 @@
 // Dependencies
 var mongoose        = require('mongoose');
 var User            = require('./usermodel.js');
+var Scuba            = require('./scubamodel.js');
 
 // Opens App Routes
 module.exports = function(app) {
