@@ -9,6 +9,7 @@ angular.module('gservice', [])
 
         // Array of locations obtained from API calls
         var locations = [];
+        // var scuba_locations = [];
 
         // Selected Location (initialize to center of America)
         var selectedLat = 36.598;
@@ -70,8 +71,8 @@ angular.module('gservice', [])
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
 
-        // This is where to filter which markers get shown
-                // if(username === "Venice Skate Park"){
+// This is where to filter which markers get shown
+                // if(usertype === "Skateboarding"){
 
 
                 locations.push({
@@ -108,8 +109,29 @@ var initialize = function(latitude, longitude) {
         });
     }
 
+
+
     // Loop through each location in the array and place a marker
     locations.forEach(function(n, i){
+
+
+
+// SWITCH CASE NOT WORKING
+// var location_type = document.getElementById("type-input").value;
+
+//         switch (usertype) {
+//     case "Scuba":
+//         icon = "https://s-media-cache-ak0.pinimg.com/originals/c6/64/6b/c6646baf71f76460ed708a975cb993a6.jpg";
+//         break;
+//     case "Skateboarding":
+//         icon = "http://cdn.shopify.com/s/files/1/0262/6741/files/skateboard_icon__thumb_ad7dd2c2-3f4e-48cd-9803-725af55aabd8_small.png?17131587700476465343";
+//         break;
+
+// }
+
+
+
+
         var icon = "http://cdn.shopify.com/s/files/1/0262/6741/files/skateboard_icon__thumb_ad7dd2c2-3f4e-48cd-9803-725af55aabd8_small.png?17131587700476465343"
         // console.log(username);
         var marker = new google.maps.Marker({
@@ -118,6 +140,7 @@ var initialize = function(latitude, longitude) {
             map: map,
             title: "Big Map",
             icon: icon,
+
         });
 
         // For each marker created, add a listener that checks for clicks
@@ -128,6 +151,7 @@ var initialize = function(latitude, longitude) {
             n.message.open(map, marker);
         });
     });
+
 
     // Set initial location as a bouncing red marker
     var initialLocation = new google.maps.LatLng(latitude, longitude);
