@@ -144,9 +144,19 @@
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                         <p><b>1. Click the location on the map of new activity or ignore to use current location.</b></p>
 
-                        <div class="form-group">
+              <!--           <div class="form-group">
                             <label for="usertype">2. Type of Location <span class="badge">Required</span></label>
                             <input type="text" class="form-control" id="type-input" placeholder="Enter Type of Location" ng-model="formData.type" required>
+                        </div> -->
+                         <div class="form-group">
+                            <label for="usertype">2. Type of Location <span class="badge">Required</span></label>
+                        </br>
+                             <select ng-model="formData.type" id="type_dropdown">
+                              <option value="Activity_Type" disabled selected>Activity Type</option>
+                              <option value="Skateboarding" ng-model="formData.type" required>Skateboarding</option>
+                              <option value="Scuba">Scuba Diving</option>
+                              <option value="Hiking">Hiking</option>
+                            </select>
                         </div>
 
                         <div class="form-group">

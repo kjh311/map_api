@@ -10,6 +10,7 @@ angular.module('gservice', [])
         // Array of locations obtained from API calls
         var skateboarding_locations = [];
         var scuba_locations = [];
+        var hiking_locations = [];
 
         // Selected Location (initialize to center of America)
         var selectedLat = 36.598;
@@ -27,6 +28,8 @@ angular.module('gservice', [])
             // Clears the holding array of locations
             skateboarding_locations = [];
             scuba_locations = [];
+            hiking_locations = [];
+
 
             // Set the selected lat and long equal to the ones provided on the refresh() call
             selectedLat = latitude;
@@ -38,6 +41,7 @@ angular.module('gservice', [])
                 // Convert the results into Google Map Format
                 skateboarding_locations = convertSkateboardingToMapPoints(response);
                 scuba_locations = convertScubaToMapPoints(response);
+                hiking_locations = convertHikingToMapPoints(response);
                 console.log('users gotten from db gservice.js');
                 // Then initialize the map.
                 initialize(latitude, longitude);
@@ -56,12 +60,10 @@ angular.module('gservice', [])
             console.log('convert db users into map icons gservice.js');
             // Clear the skateboarding_locations holder
             var skateboarding_locations = [];
-            // var scuba_locations = [];
 
             // Loop through all of the JSON entries provided in the response
             for(var i= 0; i < response.length; i++) {
                 var user = response[i];
-                // var activity_locations = skateboarding_locations + scuba_locations;
                 usertype = user.type;
                 username = user.name;
                 description = user.description;
@@ -88,9 +90,8 @@ angular.module('gservice', [])
                     username: user.username,
                     gender: user.description,
             });
-
-     }
         }
+    }
 
 // location is now an array populated with records in Google Maps format
         return skateboarding_locations;
@@ -141,6 +142,51 @@ angular.module('gservice', [])
         return scuba_locations;
     };
 
+
+        // Convert a JSON of SCUBA users into map points
+        var convertHikingToMapPoints = function(response){
+            console.log('convert db hiking into map icons gservice.js');
+            // Clear the scuba_locations holder
+
+            var hiking_locations = [];
+
+            // Loop through all of the JSON entries provided in the response
+            for(var i= 0; i < response.length; i++) {
+                var user = response[i];
+                usertype = user.type;
+                username = user.name;
+                description = user.description;
+                // Create popup windows for each record
+                var  contentString =
+                    '<p><h2> ' + user.name + '</h2>' +
+                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
+                    '<h4> ' + user.description + '</h4>' +
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
+                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</p>';
+
+                // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
+
+// This is where to filter which markers get shown
+                if(usertype === "Hiking"){
+                hiking_locations.push({
+                    latlon: new google.maps.LatLng(user.location[1], user.location[0]),
+                    message: new google.maps.InfoWindow({
+                        content: contentString,
+                        maxWidth: 320
+                    }),
+                    usertype: user.type,
+                    username: user.username,
+                    gender: user.description,
+            });
+
+     }
+        }
+
+// location is now an array populated with records in Google Maps format
+        return hiking_locations;
+    };
+
 // Initializes the map
 var initialize = function(latitude, longitude) {
     console.log('initialize map gservice.js');
@@ -186,6 +232,27 @@ var initialize = function(latitude, longitude) {
     scuba_locations.forEach(function(n, i){
 
         var icon = "http://www.kitesurfingcruise.com/uploads/4/7/8/2/47820161/______7135059.png"
+        // console.log(username);
+        var marker = new google.maps.Marker({
+            position: n.latlon,
+            animation: google.maps.Animation.DROP,
+            map: map,
+            title: "Big Map",
+            icon: icon,
+        });
+
+        // For each marker created, add a listener that checks for clicks
+        google.maps.event.addListener(marker, 'click', function(e){
+
+            // When clicked, open the selected marker's message
+            currentSelectedMarker = n;
+            n.message.open(map, marker);
+        });
+    });
+
+    hiking_locations.forEach(function(n, i){
+
+        var icon = "https://asset3.skimble.com/images/sports/hiking.png?1462250922"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
