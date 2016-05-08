@@ -4,12 +4,9 @@ var Schema      = mongoose.Schema;
 
 // Creates a User Schema. This will be the basis of how user data is stored in the db
 var UserSchema = new Schema({
+    type: {type: String, required: true},
     name: {type: String, required: true},
     description: {type: String, required: true},
-    // username: {type: String, required: true},
-    // gender: {type: String, required: true},
-    // age: {type: Number, required: true},
-    // favlang: {type: String, required: true},
     location: {type: [Number], required: true}, // [Long, Lat]
     htmlverified: String,
     created_at: {type: Date, default: Date.now},
@@ -31,4 +28,4 @@ UserSchema.pre('save', function(next){
 UserSchema.index({location: '2dsphere'});
 
 // Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "scotch-users"
-module.exports = mongoose.model('fuck-face', UserSchema);
+module.exports = mongoose.model('shit-head', UserSchema);

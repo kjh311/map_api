@@ -3,8 +3,6 @@
 var addCtrl = angular.module('addCtrl', ['geolocation', 'gservice']);
 addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, gservice){
 
-// var addCtrl = angular.module('addCtrl', ['geolocation']);
-// addCtrl.controller('addCtrl', function($scope, $http, geolocation){
 
     // Initializes Variables
     // ----------------------------------------------------------------------------
@@ -48,17 +46,14 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 });
 
 // Create User Function
-// ...
-
-
     // Creates a new user based on the form fields
     $scope.createUser = function() {
 
         // Grabs all of the text box fields
         var userData = {
+            type: $scope.formData.type,
             name: $scope.formData.name,
             description: $scope.formData.description,
-
             favlang: $scope.formData.favlang,
             location: [$scope.formData.longitude, $scope.formData.latitude],
             htmlverified: $scope.formData.htmlverified
@@ -70,10 +65,10 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
                 console.log('new user created addCtrl.js');
 
                 // Once complete, clear the form (except location)
+                $scope.formData.type = "";
                 $scope.formData.name = "";
                 $scope.formData.description = "";
-                // $scope.formData.age = "";
-                $scope.formData.favlang = "";
+
 
             })
             .error(function (data) {
