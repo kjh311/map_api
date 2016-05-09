@@ -1,7 +1,6 @@
 // Dependencies
 var mongoose        = require('mongoose');
-// var User            = require('./usermodel.js');
-var Scuba            = require('./scubamodel.js');
+var User            = require('./model.js');
 
 // Opens App Routes
 module.exports = function(app) {
@@ -9,36 +8,40 @@ module.exports = function(app) {
     // GET Routes
     // --------------------------------------------------------
     // Retrieve records for all users in the db
-    // app.get('/users', function(req, res){
+    app.get('/users', function(req, res){
 
-    //     // Uses Mongoose schema to run the search (empty conditions)
-    //     var query = User.find({});
-    //     query.exec(function(err, users){
-    //         if(err)
-    //             res.send(err);
+        // Uses Mongoose schema to run the search (empty conditions)
+        var query = User.find({});
+        query.exec(function(err, users){
+            if(err)
+                res.send(err);
 
-    //         // If no errors are found, it responds with a JSON of all users
-    //         res.json(users);
-    //     });
-    // });
+            // If no errors are found, it responds with a JSON of all users
+            res.json(users);
+            console.log('get all users from db routes.js');
+        });
+    });
 
-    // // POST Routes
-    // // --------------------------------------------------------
-    // // Provides method for saving new users in the db
-    // app.post('/users', function(req, res){
+    // POST Routes
+    // --------------------------------------------------------
+    // Provides method for saving new users in the db
+    app.post('/users', function(req, res){
 
-    //     // Creates a new User based on the Mongoose schema and the post bo.dy
-    //     var newuser = new User(req.body);
+        // Creates a new User based on the Mongoose schema and the post bo.dy
+        var newuser = new User(req.body);
 
-    //     // New User is saved in the db.
-    //     newuser.save(function(err){
-    //         if(err)
-    //             res.send(err);
+        // New User is saved in the db.
+        newuser.save(function(err){
+            console.log('new user posted to db routes.js');
+            if(err)
+                res.send(err);
 
-    //         // If no errors are found, it responds with a JSON of the new user
-    //         res.json(req.body);
-    //     });
-    // });
+            // If no errors are found, it responds with a JSON of the new user
+            res.json(req.body);
+        });
+    });
+};
+// });
 
     // Skateboard Routes
     // Camping Routes

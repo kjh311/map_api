@@ -3,8 +3,6 @@
 var addCtrl = angular.module('addCtrl', ['geolocation', 'gservice']);
 addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, gservice){
 
-// var addCtrl = angular.module('addCtrl', ['geolocation']);
-// addCtrl.controller('addCtrl', function($scope, $http, geolocation){
 
     // Initializes Variables
     // ----------------------------------------------------------------------------
@@ -38,7 +36,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
     // ----------------------------------------------------------------------------
     // Get coordinates based on mouse click. When a click event is detected....
     $rootScope.$on("clicked", function(){
-
+        console.log('icon moved addCtrl.js');
     // Run the gservice functions associated with identifying coordinates
     $scope.$apply(function(){
     $scope.formData.latitude = parseFloat(gservice.clickLat).toFixed(3);
@@ -48,40 +46,43 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 });
 
 // Create User Function
+    // Creates a new user based on the form fields
+    $scope.createUser = function() {
+
+        // Grabs all of the text box fields
+        var userData = {
+            type: $scope.formData.type,
+            name: $scope.formData.name,
+            description: $scope.formData.description,
+            favlang: $scope.formData.favlang,
+            location: [$scope.formData.longitude, $scope.formData.latitude],
+            htmlverified: $scope.formData.htmlverified
+        };
+
+        // Saves the user data to the db
+        $http.post('/users', userData)
+            .success(function (data) {
+                console.log('new user created addCtrl.js');
+
+                // Once complete, clear the form (except location)
+                $scope.formData.type = "";
+                $scope.formData.name = "";
+                $scope.formData.description = "";
+
+
+            })
+            .error(function (data) {
+                console.log('Error: ' + data);
+            });
+
+            // Logic for Clearing the FOrm
 // ...
 
+// Refresh the map with new data
+gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
 
-//     // Creates a new user based on the form fields
-//     $scope.createUser = function() {
-
-//         // Grabs all of the text box fields
-//         var userData = {
-//             name: $scope.formData.name,
-//             description: $scope.formData.description,
-
-//             favlang: $scope.formData.favlang,
-//             location: [$scope.formData.longitude, $scope.formData.latitude],
-//             htmlverified: $scope.formData.htmlverified
-//         };
-
-//         // Saves the user data to the db
-//         $http.post('/users', userData)
-//             .success(function (data) {
-
-//                 // Once complete, clear the form (except location)
-//                 $scope.formData.name = "";
-//                 $scope.formData.description = "";
-//                 // $scope.formData.age = "";
-//                 $scope.formData.favlang = "";
-
-//             })
-//             .error(function (data) {
-//                 console.log('Error: ' + data);
-//             });
-
-//             // Logic for Clearing the FOrm
-// // ...
-
+    };
+});
 // // Refresh the map with new data
 // gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
 

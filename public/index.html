@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Out and About</a>
+            <a class="navbar-brand" href="#"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -143,13 +143,40 @@
                     <form name ="addForm" novalidate>
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                         <p><b>1. Click the location on the map of new activity or ignore to use current location.</b></p>
+
+              <!--           <div class="form-group">
+                            <label for="usertype">2. Type of Location <span class="badge">Required</span></label>
+                            <input type="text" class="form-control" id="type-input" placeholder="Enter Type of Location" ng-model="formData.type" required>
+                        </div> -->
+                         <div class="form-group">
+                            <label for="usertype">2. Type of Location <span class="badge">Required</span></label>
+                        </br>
+                             <select id="type_dropdown" ng-model="formData.type" required>
+                              <option value="Activity_Type" disabled selected>Activity Type</option>
+                              <option value="Skateboarding" required>Skateboarding</option>
+                              <option value="Scuba">Scuba Diving</option>
+                              <option value="Hiking">Hiking</option>
+                              <option value="Camping">Camping</option>
+                              <option value="Surfing">Surfing</option>
+                              <option value="Photography">Photography</option>
+                              <option value="Mountain_Biking">Mountain Biking</option>
+                              <option value="Basketball">Basketball</option>
+                              <option value="Brewery">Brewery</option>
+
+                            </select>
+                        </div>
+
+                        <!-- Sample Picture -->
+                        <!-- <img style="width:300px;maxheight:300px;" src="http://www.aussiediversphuket.com/wp-content/uploads/2015/07/scuba-diving-phuket-with-aussie-divers.jpg"> -->
+
+
                         <div class="form-group">
-                            <label for="scubaname">2. Name of Location <span class="badge">Required</span></label>
+                            <label for="username">3. Name of Location <span class="badge">Required</span></label>
                             <input type="text" class="form-control" id="name" placeholder="Enter Name of Location" ng-model="formData.name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="scubaname">3. Description  <span class="badge">Required</span></label>
+                            <label for="username">4. Description  <span class="badge">Required</span></label>
                             <textarea rows="4" cols="50"  type="text" class="form-control" id="description" placeholder="Please enter a description" ng-model="formData.description" required>
 
                             </textarea>
@@ -197,7 +224,7 @@
                             <label for="verified">HTML5 Verified Location? <span><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
                             <input type="text" class="form-control" id="verified" placeholder= "Nope (Thanks for spamming my map...)" ng-model="formData.htmlverified" readonly>
                         </div>
-                        <!-- Submit button. Note that its tied to createscuba() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
+                        <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
                         <!-- <button type="submit" class="btn btn-danger btn-block" ng-disabled="addForm.$invalid">Submit</button> -->
                         <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Submit</button>
                     </form>
