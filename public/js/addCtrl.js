@@ -45,6 +45,11 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
     });
 });
 
+$scope.button = function() {
+  alert('button works');
+};
+
+
 // Create User Function
     // Creates a new user based on the form fields
     $scope.createUser = function() {

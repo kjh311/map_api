@@ -1,3 +1,7 @@
+// Weather API
+// http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=e43c18b3b50f85a765b1c8ee556b0ebe
+
+
 // Creates the gservice factory. This will be the primary means by which we interact with Google Maps
 angular.module('gservice', [])
  .factory('gservice', function($rootScope, $http){
@@ -25,6 +29,9 @@ angular.module('gservice', [])
         // Handling Clicks and location selection
         googleMapService.clickLat  = 0;
         googleMapService.clickLong = 0;
+
+
+
 
         // Functions
         // --------------------------------------------------------------
@@ -96,6 +103,8 @@ angular.module('gservice', [])
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
+
+
 
 // This is where to filter which markers get shown
                 if(usertype === "Skateboarding"){

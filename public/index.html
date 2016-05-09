@@ -24,6 +24,8 @@
     <script src="js/app.js"></script>
     <script src="js/addCtrl.js"></script>
     <script src="js/gservice.js"></script>
+
+
 </head>
 <body ng-controller="addCtrl">
 
@@ -89,6 +91,7 @@
             <div id="map" style="width:645px; height:645px"></div>
         </div>
 
+
         <!-- checkboxes -->
         <div class="col-md-5">
             <div class="panel panel-default ">
@@ -96,34 +99,81 @@
                 <div class="panel-heading">
                     <h2 class="panel-title text-center">Choose Your Activity!</h2>
                 </div>
-                    <div class="checkbox container ">
-                        <label>
-                            <input type="checkbox" value="skateboard" class="check" id="checkbox_skate">
-                            Skateboarding
-                        </label>
-                    </div>
 
-                    <div class="checkbox container ">
-                        <label>
-                            <input type="checkbox" value="scuba" class="check" id="checkbox_scuba">
-                            Scuba Diving
-                        </label>
-                    </div>
+                <!-- <button type="button" class="btn btn-default">button</button> -->
+                <!-- <button id="sk8_button"  onclick="myFunction()">Skateboard</button> -->
+                <!-- <button ng-click="myFunc()">OK</button> -->
+                  <!-- <label>Check me to check both:
+                    <input type="checkbox" ng-model="master"></label><br/>
+                    <input id="checkSlave" type="checkbox" ng-checked="master" aria-label="Slave input"> -->
 
-                    <div class="checkbox container ">
-                        <label>
-                            <input type="checkbox" value="hiking" class="check" id="checkbox_hiking">
-                            Hiking
-                        </label>
-                    </div>
 
-                     <div class="checkbox container ">
-                        <label>
-                            <input type="checkbox" value="camping" class="check" id="checkbox_camping">
-                            Camping
-                        </label>
-                    </div>
+                    <form ng-controller="ExampleController">
 
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" ng-check="button()" class="check" id="checkbox_skate">
+                                Skateboarding
+                            </label>
+                        </div>
+
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="scuba" class="check" id="checkbox_scuba">
+                                Scuba Diving
+                            </label>
+                        </div>
+
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="hiking" class="check" id="checkbox_hiking">
+                                Hiking
+                            </label>
+                        </div>
+
+                         <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="camping" class="check" id="checkbox_camping">
+                                Camping
+                            </label>
+                        </div>
+
+                         <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="surfing" class="check" id="checkbox_surfing">
+                                Surfing
+                            </label>
+                        </div>
+
+                         <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="photography" class="check" id="checkbox_photography">
+                                Photography
+                            </label>
+                        </div>
+
+                         <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="mountain_biking" class="check" id="checkbox_mountain_biking">
+                                Mountain Biking
+                            </label>
+                        </div>
+
+                         <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="basketball" class="check" id="checkbox_basketball">
+                                Basketball
+                            </label>
+                        </div>
+
+                         <div class="checkbox-inline">
+                            <label>
+                                <input type="checkbox" value="brewery" class="check" id="checkbox_brewery">
+                                Brewery
+                            </label>
+                        </div>
+
+                    </form>
 
 </div>
 </div>
@@ -182,33 +232,6 @@
                             </textarea>
                         </div>
 
-                   <!--      <label class="radio control-label">Gender</label>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="radiomale" value="Male" ng-model="formData.gender">
-                                Male
-                            </label>
-                        </div>
-                        <div class="radio" required>
-                            <label>
-                                <input type="radio" name="optionsRadios" id="radiofemale" value="Female" ng-model="formData.gender">
-                                Female
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="radioother" value="What's it to ya?" ng-model="formData.gender">
-                                What's it to ya?
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="age">Age</label>
-                            <input type="number" class="form-control" id="age" placeholder="72" ng-model="formData.age" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="language">Favorite Language</label>
-                            <input type="text" class="form-control" id="language" placeholder="Fortran" ng-model="formData.favlang" required>
-                        </div> -->
 
 
 
@@ -241,3 +264,16 @@
 </div>
 </body>
 </html>
+<script>
+// var myFunc = function(){
+//     alert('Button works!');
+// }
+
+angular.module('myApp', [])
+.controller('myCtrl', ['$scope', function($scope) {
+    $scope.count = 0;
+    $scope.myFunc = function() {
+        $scope.count++;
+    };
+}]);
+</script>

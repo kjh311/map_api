@@ -1,3 +1,8 @@
+body{
+  user-select: none;
+  font-size: 18px;
+}
+
 .hidden{
   visibility: none;
 }
@@ -6,6 +11,12 @@
 content: "";
 display: table;
 }
+
+/*.checkbox{
+  display: inline-block;
+  padding-right:  30px;
+  padding-left: 20px;
+}*/
 
 .nav-wrapper {
    width:100%;
