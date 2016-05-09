@@ -98,8 +98,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger" ng-model="formData.id">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -144,8 +144,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '<h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -189,8 +189,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -235,8 +235,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -279,8 +279,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -323,8 +323,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -367,8 +367,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -411,8 +411,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -455,8 +455,8 @@ angular.module('gservice', [])
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank">DIRECTIONS</a></h4>'
-                    // '<button type="button" class="btn btn-primary">Directions</button>'
+                    '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -503,14 +503,16 @@ var initialize = function(latitude, longitude) {
     skateboarding_locations.forEach(function(n, i){
 
 
-        var icon = "http://cdn.shopify.com/s/files/1/0262/6741/files/skateboard_icon__thumb_ad7dd2c2-3f4e-48cd-9803-725af55aabd8_small.png?17131587700476465343"
-        // console.log(username);
+        var icon = {
+            url: "/images/skate3.png"
+        };
         var marker = new google.maps.Marker({
             position: n.latlon,
             animation: google.maps.Animation.DROP,
             map: map,
             title: "Big Map",
             icon: icon,
+
         });
 
         // For each marker created, add a listener that checks for clicks
@@ -525,7 +527,7 @@ var initialize = function(latitude, longitude) {
     // Loop through each SCUBA location in the array and place a marker
     scuba_locations.forEach(function(n, i){
 
-        var icon = "http://www.kitesurfingcruise.com/uploads/4/7/8/2/47820161/______7135059.png"
+        var icon = "/images/snorkel4.png"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
@@ -546,7 +548,7 @@ var initialize = function(latitude, longitude) {
 
     hiking_locations.forEach(function(n, i){
 
-        var icon = "https://asset3.skimble.com/images/sports/hiking.png?1462250922"
+        var icon = "/images/hiking2.png"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
@@ -567,7 +569,7 @@ var initialize = function(latitude, longitude) {
 
     camping_locations.forEach(function(n, i){
 
-        var icon = "http://static.wixstatic.com/media/f9514d7bd050ecb92d1939a1f5d69a94.png/v1/fill/w_75,h_75,al_c,usm_0.66_1.00_0.01/f9514d7bd050ecb92d1939a1f5d69a94.png"
+        var icon = "/images/camping.png"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
@@ -588,7 +590,7 @@ var initialize = function(latitude, longitude) {
 
     surfing_locations.forEach(function(n, i){
 
-        var icon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAclBMVEUaFxv///8cGR3k5OQtKi7JyMkhHiIeGx/v7+9kYmQ7OTzY2NkmIydxb3L5+fkpJipOTE83NDhGREegn6CUk5Xo5+iop6hAPUHy8vJaWFp8enzAv8BpZ2pWVFeGhIbPzs+2tbd3dnirqqyioKKXlZeAf4E4b7MpAAACsUlEQVRIiYWWh5KDIBCGqYoSsbfYU97/FW/RREUxtzN3mUE+3P3ZIsJno0+PITDWPoTlMbLs928u0Qhxw7It8n+QpnbRwZyW/0B4d9y/mCcvEHW3A2Bub0VkeUmARfSMjM4vAuTjR2S07Go9QwZuIs0ZICPGJjPsEWnxyoP13vQt3xDlW9zSIh3Wow2ZLATyKfWOa9kXGWwEQY6jUybu+nFFXfpBInNzHKTNIOlsQs2Or6F6C2KqVTdLKsBfBf+UkGOfkPWxnJF6/4ZR65fVvsQidkLGwoOWgUboPnfhxbxe4rSn6K0CJDWCbgP9k2D8tBIIjYCclATjWNwukAmjPD4vRxdXNTug0NNyXGMGaBjjqCanVR/j62pzemR5SYarq0hAIJuSkBVP9M680I5YYtfBlx3cqMishWpbfGGKWPCC1JC2Ey0Ikcs1um+Mc2ZzLDwq5q/1q7PnjNTIO95AgNX3bMi0YH+Y1tHJUHHU87GVHGhHyeyMlyAUVrrTsQGJY93LXUa28Jr6xQVWL/Az13h0Tkum1vy6RbrWlSyCRLsyZHrxDkhhInAr4ASKvVQqmBzL7jlGMcvbAJKb8UP0UTBSrIaXt5e4W1pEqHQh7z1zE136Fe+jgypTtWy7z7X/1d5J3k2FadGe7zxpPnOB0KUp6dxMMl5BM59gexlkzyLNpq6cr/mW3JvhWwzBp49JeDLR4oFbEKyQwyPr+3QcqBA5lVLy59qDnPzbYJdu7TUETflru6ewjOou2WuQbp0/mf0En36Psno3LOinnC4rfrZY7EcS/7158VOag6/5lwmH43jl52oyzF9n/zbEafSLqLevmf3XRX/p3C3dbTM+SKStP4P6AcVXCMzA4NS92F2ae04fV2KcEuYQuFdCHBbdIVPxPwiYavqOuS4MVm55iv8AEAIgqsDC8rUAAAAASUVORK5CYII="
+        var icon = "/images/surf4.png"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
@@ -609,7 +611,7 @@ var initialize = function(latitude, longitude) {
 
     photography_locations.forEach(function(n, i){
 
-        var icon = "http://www.shyamdigital.co.uk/wp-content/uploads/2014/03/photography-icon.png"
+        var icon = "/images/camera6.png"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
@@ -630,7 +632,7 @@ var initialize = function(latitude, longitude) {
 
     mountain_biking_locations.forEach(function(n, i){
 
-        var icon = "https://joinarace.com/assets/img/icon-mtb.png"
+        var icon = "/images/bike2.png"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
@@ -651,7 +653,7 @@ var initialize = function(latitude, longitude) {
 
     basketball_locations.forEach(function(n, i){
 
-        var icon = "http://approbet.com/wp-content/themes/foxeed-lite-child/imgs/basketball-icon.png"
+        var icon = "/images/basket.png"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
@@ -672,7 +674,7 @@ var initialize = function(latitude, longitude) {
 
     brewery_locations.forEach(function(n, i){
 
-        var icon = "http://www.visitbelgium.com/belgianbites/images/icon_beer.png"
+        var icon = "/images/beer3.png"
         // console.log(username);
         var marker = new google.maps.Marker({
             position: n.latlon,
@@ -696,7 +698,7 @@ var initialize = function(latitude, longitude) {
     var initialLocation = new google.maps.LatLng(latitude, longitude);
     var marker = new google.maps.Marker({
         position: initialLocation,
-        animation: google.maps.Animation.DROP,
+        // animation: google.maps.Animation.DROP,
         map: map,
         icon: 'https://www.teawamutu.nz/town/2/images/icons/iconMe_N.png'
     });
@@ -715,7 +717,7 @@ google.maps.event.addListener(map, 'click', function(e){
 
     var marker = new google.maps.Marker({
         position: e.latLng,
-        animation: google.maps.Animation.DROP,
+        // animation: google.maps.Animation.DROP,
         map: map,
         icon: 'http://www.westcoastfish.co.uk/wp-content/uploads/2013/05/Map-Marker.png'
     });
