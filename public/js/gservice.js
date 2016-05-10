@@ -96,7 +96,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger" ng-model="formData.id">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -142,7 +141,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '<h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -187,7 +185,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -233,7 +230,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -277,7 +273,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -321,7 +316,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -365,7 +359,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -385,6 +378,7 @@ angular.module('gservice', [])
                     username: user.username,
                     gender: user.description,
             });
+
 
      }
         }
@@ -409,7 +403,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -453,7 +446,6 @@ angular.module('gservice', [])
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
-                    '<h4> ' + 'Type: ' + '</br>' + user.type + '</h4>' +
                     '<h4> ' + user.description + '</h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -481,6 +473,37 @@ angular.module('gservice', [])
         return brewery_locations;
     };
 
+// var addSk8 = document.getElementById("sk8butt");
+    var findSk8Locals = function(){
+
+
+    // var findSk8Locals = skateboarding_locations.forEach(function(n, i){
+        document.getElementById("sk8butt").style.color = "red";
+};
+        // var icon = {
+        //     url: "/images/skate3.png"
+        // };
+        // var marker = new google.maps.Marker({
+        //     position: n.latlon,
+        //     animation: google.maps.Animation.DROP,
+        //     map: map,
+        //     title: "Big Map",
+        //     icon: icon,
+
+        // });
+
+        // // For each marker created, add a listener that checks for clicks
+        // google.maps.event.addListener(marker, 'click', function(e){
+
+        //     // When clicked, open the selected marker's message
+        //     currentSelectedMarker = n;
+        //     n.message.open(map, marker);
+        // });
+    // });
+
+
+
+
 // Initializes the map
 var initialize = function(latitude, longitude) {
     console.log('initialize map gservice.js');
@@ -498,31 +521,35 @@ var initialize = function(latitude, longitude) {
     }
 
 
-
+// TRYING TO MAKE CERTAIN MAP MARKERS APPEAR ON COMMAND
     // Loop through each SKATEBOARDING location in the array and place a marker
-    skateboarding_locations.forEach(function(n, i){
+    // skateboarding_locations.forEach(function(n, i){
+    //     var icon = {
+    //         url: "/images/skate3.png"
+    //     };
+    //     var marker = new google.maps.Marker({
+    //         position: n.latlon,
+    //         animation: google.maps.Animation.DROP,
+    //         map: map,
+    //         title: "Big Map",
+    //         icon: icon,
+
+    //     });
+
+    //     // For each marker created, add a listener that checks for clicks
+    //     google.maps.event.addListener(marker, 'click', function(e){
+
+    //         // When clicked, open the selected marker's message
+    //         currentSelectedMarker = n;
+    //         n.message.open(map, marker);
+    //     });
+    // });
 
 
-        var icon = {
-            url: "/images/skate3.png"
-        };
-        var marker = new google.maps.Marker({
-            position: n.latlon,
-            animation: google.maps.Animation.DROP,
-            map: map,
-            title: "Big Map",
-            icon: icon,
+// Code to reload the map
+ // google.maps.event.addDomListener(window, 'load',
+ //    googleMapService.refresh(selectedLat, selectedLong));
 
-        });
-
-        // For each marker created, add a listener that checks for clicks
-        google.maps.event.addListener(marker, 'click', function(e){
-
-            // When clicked, open the selected marker's message
-            currentSelectedMarker = n;
-            n.message.open(map, marker);
-        });
-    });
 
     // Loop through each SCUBA location in the array and place a marker
     scuba_locations.forEach(function(n, i){
@@ -719,7 +746,7 @@ google.maps.event.addListener(map, 'click', function(e){
         position: e.latLng,
         // animation: google.maps.Animation.DROP,
         map: map,
-        icon: 'http://www.westcoastfish.co.uk/wp-content/uploads/2013/05/Map-Marker.png'
+        icon: 'http://mapbullet.com/map/images/find.png'
     });
 
     // When a new spot is selected, delete the old red bouncing marker
@@ -742,8 +769,8 @@ $rootScope.$broadcast("clicked");
 };
 
 // Refresh the page upon window load. Use the initial latitude and longitude
-google.maps.event.addDomListener(window, 'load',
-    googleMapService.refresh(selectedLat, selectedLong));
+// google.maps.event.addDomListener(window, 'load',
+//     googleMapService.refresh(selectedLat, selectedLong));
 
 return googleMapService;
 });
