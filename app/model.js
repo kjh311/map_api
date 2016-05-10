@@ -30,3 +30,5 @@ UserSchema.index({location: '2dsphere'});
 
 // Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "scotch-users"
 module.exports = mongoose.model('fuck-head', UserSchema);
+// fuck-head was the previous
+// rubbish is actual locations
