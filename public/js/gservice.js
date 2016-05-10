@@ -98,15 +98,29 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
 
-                    '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate3.png">' +
+                    // '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate3.png">' +
+                     // Weather widget
+                   '<div class="weather-app">'  +
+
+                       '<div class="top">'  +
+                        ' <img style="display:inline;float:right;" id="icon" width="75px" src="imgs/codes/603.png" />'  +
+                       '</div>'     +
+                       '<div >'   +
+                       '<div style="display:inline;float:right;" class="temperature"><span id="temperature"><h2>0&deg;</h2></span></div> '   +
+                       '  </div>    '   +
+                       '  <div>'  +
+
+
+                       '  </div>'   +
+                       '</div>'     +
                     '<h4> ' + user.description + '</h4>' +
                     '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger" ng-model="formData.id">DELETE Location</button>'
-                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
-
+                // getInfo();
 
 
 // This is where to filter which markers get shown

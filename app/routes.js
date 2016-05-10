@@ -39,5 +39,7 @@ module.exports = function(app) {
             // If no errors are found, it responds with a JSON of the new user
             res.json(req.body);
         });
+
     });
+
 };
