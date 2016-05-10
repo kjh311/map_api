@@ -7,6 +7,7 @@ var UserSchema = new Schema({
     type: {type: String, required: true},
     name: {type: String, required: true},
     description: {type: String, required: true},
+    photo: {type: String, required: false},
     location: {type: [Number], required: true}, // [Long, Lat]
     htmlverified: String,
     created_at: {type: Date, default: Date.now},

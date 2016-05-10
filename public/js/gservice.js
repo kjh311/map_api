@@ -93,10 +93,12 @@ angular.module('gservice', [])
                 usertype = user.type;
                 username = user.name;
                 description = user.description;
+                photo = user.photo;
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger" ng-model="formData.id">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -116,6 +118,7 @@ angular.module('gservice', [])
                     usertype: user.type,
                     username: user.username,
                     gender: user.description,
+                    photo: user.photo,
             });
         }
     }
@@ -142,6 +145,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '<h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -186,6 +190,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -231,6 +236,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -274,6 +280,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -317,6 +324,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -360,6 +368,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -404,6 +413,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -447,6 +457,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2> ' + user.name + '</h2>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -523,27 +534,27 @@ var initialize = function(latitude, longitude) {
 
 // TRYING TO MAKE CERTAIN MAP MARKERS APPEAR ON COMMAND
     // Loop through each SKATEBOARDING location in the array and place a marker
-    // skateboarding_locations.forEach(function(n, i){
-    //     var icon = {
-    //         url: "/images/skate3.png"
-    //     };
-    //     var marker = new google.maps.Marker({
-    //         position: n.latlon,
-    //         animation: google.maps.Animation.DROP,
-    //         map: map,
-    //         title: "Big Map",
-    //         icon: icon,
+    skateboarding_locations.forEach(function(n, i){
+        var icon = {
+            url: "/images/skate3.png"
+        };
+        var marker = new google.maps.Marker({
+            position: n.latlon,
+            animation: google.maps.Animation.DROP,
+            map: map,
+            title: "Big Map",
+            icon: icon,
 
-    //     });
+        });
 
-    //     // For each marker created, add a listener that checks for clicks
-    //     google.maps.event.addListener(marker, 'click', function(e){
+        // For each marker created, add a listener that checks for clicks
+        google.maps.event.addListener(marker, 'click', function(e){
 
-    //         // When clicked, open the selected marker's message
-    //         currentSelectedMarker = n;
-    //         n.message.open(map, marker);
-    //     });
-    // });
+            // When clicked, open the selected marker's message
+            currentSelectedMarker = n;
+            n.message.open(map, marker);
+        });
+    });
 
 
 // Code to reload the map

@@ -45,9 +45,10 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
     });
 });
 
-$scope.button = function() {
-  alert('button works');
-};
+
+// $scope.button = function() {
+//   alert('button works');
+// };
 
 
 // Create User Function
@@ -59,6 +60,7 @@ $scope.button = function() {
             type: $scope.formData.type,
             name: $scope.formData.name,
             description: $scope.formData.description,
+            photo: $scope.formData.photo,
             favlang: $scope.formData.favlang,
             location: [$scope.formData.longitude, $scope.formData.latitude],
             htmlverified: $scope.formData.htmlverified
@@ -73,6 +75,7 @@ $scope.button = function() {
                 $scope.formData.type = "";
                 $scope.formData.name = "";
                 $scope.formData.description = "";
+                $scope.formData.photo = "";
 
 
             })
