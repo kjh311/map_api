@@ -90,7 +90,7 @@ window.onload = function (){
   // } else {
   //   var zip = window.prompt("Could not discover your location. What is your zip code?");
   //     }
-updateByZip("87107");
+updateByZip("91342");
 }
 
 

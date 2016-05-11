@@ -98,7 +98,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
 
-                    // '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate3.png">' +
+                    '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate3.png">' +
                      // Weather widget
                    '<div class="weather-app">'  +
 
@@ -114,7 +114,7 @@ angular.module('gservice', [])
                        '  </div>'   +
                        '</div>'     +
                     '<h4> ' + user.description + '</h4>' +
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
 
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger" ng-model="formData.id">DELETE Location</button>'
                     '</p>';
@@ -162,7 +162,7 @@ angular.module('gservice', [])
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/snorkel4.png">' +
 
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '<h4> ' + user.description + '</h4>' +
                     '<h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
@@ -210,7 +210,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/hiking2.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -258,7 +258,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/camping.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -304,7 +304,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/surf4.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -350,7 +350,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/camera6.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -396,7 +396,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/bike2.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -442,7 +442,7 @@ angular.module('gservice', [])
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/basket.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -487,7 +487,7 @@ angular.module('gservice', [])
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
                     '<img style="display:inline;float:right;" class="popup_icon" src="/images/beer3.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '">' +
+                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
