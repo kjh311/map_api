@@ -2,7 +2,7 @@
   "name": "MeanMapsApp",
   "main": "server.js",
   "engines": {
-    "node": "0.0.0"
+    "node": "*"
   },
   "dependencies": {
     "angular-route": "^1.5.5",
