@@ -62,6 +62,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
             type: $scope.formData.type,
             name: $scope.formData.name,
             description: $scope.formData.description,
+            website: $scope.formData.website,
             photo: $scope.formData.photo,
             favlang: $scope.formData.favlang,
             location: [$scope.formData.longitude, $scope.formData.latitude],
@@ -76,6 +77,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
                 // Once complete, clear the form (except location)
                 $scope.formData.type = "";
                 $scope.formData.name = "";
+                $scope.formData.description = "";
                 $scope.formData.description = "";
                 $scope.formData.photo = "";
 

@@ -53,6 +53,12 @@ display: table;
 #type_dropdown{
   width: 100%;
 }
+.popup_photo{
+  border: 5px solid rgba(0,0,0,0);
+}
+.popup_photo:hover{
+  border: 5px solid black;
+}
 
 /*
 .weather-app {

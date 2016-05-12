@@ -9,6 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="images/hiking2.png">
 
     <!-- Holder JS -->
     <script src="../bower_components/holderjs/holder.js"></script>
@@ -93,6 +94,7 @@
         <div class="col-md-7">
             <div id="map" style="width:645px; height:645px"></div>
         </div>
+
 
         <div style="position:absolute;z-index:-1;" id="loading-div">
             <img src="http://apps.voxmedia.com/graphics/sbnation-nba-draft-meme/images/loader-427f86c0.gif" alt="">
@@ -202,7 +204,7 @@
                     <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
                     <form name ="addForm" novalidate>
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
-                        <p><b>1. Click the location on the map of new activity or ignore to use current location.</b></p>
+                        <p><b>1. Add new location at your current position or click the map to change location.</b></p>
 
               <!--           <div class="form-group">
                             <label for="usertype">2. Type of Location <span class="badge">Required</span></label>
@@ -242,6 +244,11 @@
                             </textarea>
                         </div>
 
+                  <!--       <div class="form-group">
+                            <label for="website">5. Website / Additional Info <span class="badge">Optional</span></label>
+                            <input type="text" class="form-control" id="website" placeholder="Enter Website URL" ng-model="formData.website">
+                        </div> -->
+
                         <div class="form-group">
                             <label for="username">5. Photo <span class="badge">Optional</span></label>
                             <input type="text" class="form-control" id="photo" placeholder="Enter URL of Photo" ng-model="formData.photo">
@@ -280,7 +287,7 @@
       </div>
       <div class="right">
     <div class="top">
-      <img id="icon" width="75px" src="imgs/codes/502.png" />
+      <img id="icon" width="75px" src="imgs/codes/" />
     </div>
 
       <div class="bottom">

@@ -1,5 +1,5 @@
-// Weather API
-// http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=e43c18b3b50f85a765b1c8ee556b0ebe
+
+
 
 
 // Creates the gservice factory. This will be the primary means by which we interact with Google Maps
@@ -93,6 +93,7 @@ angular.module('gservice', [])
                 usertype = user.type;
                 username = user.name;
                 description = user.description;
+                website = user.website;
                 photo = user.photo;
                 // Create popup windows for each record
                 var  contentString =
@@ -103,7 +104,7 @@ angular.module('gservice', [])
                    '<div class="weather-app">'  +
 
                        '<div class="top">'  +
-                        ' <img style="display:inline;float:right;" id="icon" width="75px" src="imgs/codes/603.png" />'  +
+                        ' <img style="display:inline;float:right;" id="icon" width="75px" src="imgs/codes/200.png" />'  +
                        '</div>'     +
                        '<div >'   +
                        '<div style="display:inline;float:right;" class="temperature"><span id="temperature"><h2>0&deg;</h2></span></div> '   +
@@ -114,8 +115,8 @@ angular.module('gservice', [])
                        '  </div>'   +
                        '</div>'     +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
-
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    // '<h4><a href="' + user.website + '"target="blank">' + user.website + '</a></h4>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger" ng-model="formData.id">DELETE Location</button>'
                     '</p>';
 
@@ -135,13 +136,20 @@ angular.module('gservice', [])
                     username: user.username,
                     gender: user.description,
                     photo: user.photo,
+                    website: user.website,
+
             });
+
         }
     }
 
 // location is now an array populated with records in Google Maps format
+
         return skateboarding_locations;
     };
+    updateByGeo(34.104203, -118.432032 );
+
+
 
         // Convert a JSON of SCUBA users into map points
         var convertScubaToMapPoints = function(response){
@@ -156,14 +164,17 @@ angular.module('gservice', [])
                 // var activity_locations = skateboarding_locations + scuba_locations;
                 usertype = user.type;
                 username = user.name;
+                website = user.website;
                 description = user.description;
+
                 // Create popup windows for each record
                 var  contentString =
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/snorkel4.png">' +
 
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '<h4> ' + user.description + '</h4>' +
+                    '<a href="' + user.website + '"></a>'
                     '<h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -210,7 +221,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/hiking2.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -258,7 +269,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/camping.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -304,7 +315,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/surf4.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -350,7 +361,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/camera6.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -396,7 +407,7 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/bike2.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -442,7 +453,7 @@ angular.module('gservice', [])
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/basket.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -487,7 +498,7 @@ angular.module('gservice', [])
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
                     '<img style="display:inline;float:right;" class="popup_icon" src="/images/beer3.png">' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.photo + '"target="blank"><img style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
+                    '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '</br></br><h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></a></h4></br><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -815,3 +826,119 @@ $rootScope.$broadcast("clicked");
 
 return googleMapService;
 });
+
+
+var options = {
+                enableHighAccuracy: true
+            };
+
+navigator.geolocation.getCurrentPosition(function(pos) {
+                $scope.position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+                console.log(JSON.stringify($scope.position));
+            },
+            function(error) {
+                alert('Unable to get location: ' + error.message);
+            }, options);
+
+
+
+// Weather API
+// http://api.opennweathermap.org/data/2.5/weather?lat=35&lon=139&appid=e43c18b3b50f85a765b1c8ee556b0ebe
+// weather API key
+var APPID = "e43c18b3b50f85a765b1c8ee556b0ebe";
+var temp;
+var loc;
+var icon;
+var humidity;
+var wind;
+var direction;
+
+// send GET request for a zip code
+function updateByZip(zip) {
+  var url = "http://api.openweathermap.org/data/2.5/weather?" +
+    "zip=" + zip +
+    "&APPID=" + APPID;
+  sendRequest(url);
+  console.log("updated by zip");
+}
+
+function updateByGeo(lat, lon) {
+  var url = "http://api.openweathermap.org/data/2.5/weather?" +
+    "lat=" + lat +
+    "&lon=" + lon +
+    "&APPID=" + APPID;
+  sendRequest(url);
+}
+
+function sendRequest(url) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+    var data = JSON.parse(xmlhttp.responseText);
+    var weather = {};
+    weather.icon = data.weather[0].id;
+    weather.humidity = data.main.humidity;
+    weather.wind = data.wind.speed;
+    weather.direction = degreesToDirection(data.wind.deg);
+    weather.loc = data.name;
+    weather.temp = K2F(data.main.temp);
+    update(weather);
+    console.log('weather gotten from api');
+  }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+}
+
+function degreesToDirection(degrees) {
+  var range = 360/16;
+  var low = 360 - range/2;
+  var high = (low + range) % 360;
+  var angles = [ "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+  for ( i in angles ) {
+
+    if( degrees >= low && degrees < high)
+      return angles[i];
+
+    low = (low + range) % 360;
+    high = (high + range) % 360;
+  }
+}
+
+function K2F(k) {
+  return Math.round(k*(9/5)-459.67);
+}
+
+function update(weather) {
+  wind.innerHTML = weather.wind;
+  direction.innerHTML = weather.direction;
+  humidity.innerHTML = weather.humidity;
+  loc.innerHTML = weather.loc;
+  temp.innerHTML = weather.temp;
+  icon.src = "imgs/codes/" + weather.icon + ".png";
+  console.log(icon.src);
+}
+
+// function showPosition(position) {
+//   updateByGeo(position.coords.latitude, position.coords.longitude);
+// }
+
+window.onload = function (){
+  temp = document.getElementById("temperature");
+  loc = document.getElementById("location");
+  icon = document.getElementById("icon");
+  humidity = document.getElementById("humidity");
+  wind = document.getElementById("wind");
+  direction = document.getElementById("direction");
+
+  // if(navigator.geolocation){
+  //   navigator.geolocation.getCurrentPosition(showPosition);
+  // } else {
+  //   var zip = window.prompt("Could not discover your location. What is your zip code?");
+  //     }
+// updateByZip("91342");
+updateByGeo(34.289427, -118.457006);
+}
+ // google.maps.event.addDomListener(window, 'load',
+ //    googleMapService.refresh(selectedLat, selectedLong));
+
