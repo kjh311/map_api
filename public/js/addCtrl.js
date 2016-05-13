@@ -133,7 +133,10 @@ window.onload = function (){
     console.log("coords are " + laty + "," + longy);
     // Display message confirming that the coordinates verified.
     $scope.formData.htmlverified = "Yep (Thanks for giving us real data!)";
+
+    // updates weather info for user's current location
     updateByGeo(coords.latitude,coords.longitude);
+
     gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
 
 });

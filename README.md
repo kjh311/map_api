@@ -1,1 +1,6 @@
-This app uses Google Maps Api to display data in a database to a map.
+"Out and About" adds activity locations to a Google Map.
+Info, Picture, weather conditions, surf report, snow report is displayed,
+allowing the user to see at a glance which activities are worth doing.
+
+
+![alt tag](images/basket.png)
