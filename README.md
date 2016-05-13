@@ -11,10 +11,10 @@ Trello: https://trello.com/b/wVMsTWCf/out-and-about
 
 Technologies:
 
-  Mongo
-  Node
-  Express
-  AngularJS
-  Bootstrap
-  Angular-Route
-  Angularjs-Geolocation
+    - Mongo
+    - Node
+    - Express
+    - AngularJS
+    - Bootstrap
+    - Angular-Route
+    - Angularjs-Geolocation
