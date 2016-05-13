@@ -101,19 +101,30 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate3.png">' +
                      // Weather widget
-                   '<div class="weather-app">'  +
+                   '<div class="weather-app">' +
+                          '<div class="left">' +
+                        '<div class="temperature"><span id="temperature">0</span>&deg;</div>' +
+                        '<div class="location"><span id="location">Unknown</span></div>' +
+                          '</div>' +
+                          '<div class="right">' +
+                        '<div class="top">' +
+                          '<img id="icon" width="75px" src="imgs/codes/" />' +
+                        '</div>' +
 
-                       '<div class="top">'  +
-                        ' <img style="display:inline;float:right;" id="icon" width="75px" src="imgs/codes/200.png" />'  +
-                       '</div>'     +
-                       '<div >'   +
-                       '<div style="display:inline;float:right;" class="temperature"><span id="temperature"><h2>0&deg;</h2></span></div> '   +
-                       '  </div>    '   +
-                       '  <div>'  +
+                          '<div class="bottom">' +
 
+                          '<div class="humidity">' +
+                            '<img src="imgs/humidity.png" height="16px" />' +
+                            '<span id="humidity">0</span>%' +
+                          '</div>' +
 
-                       '  </div>'   +
-                       '</div>'     +
+                          '<div class="wind">' +
+                            '<span id="wind">0</span> mph <span id="direction">N</span>' +
+                          '</div>' +
+
+                        '</div>' +
+                          '</div>' +
+                        '</div>' +
                     '<h4> ' + user.description + '</h4>' +
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     // '<h4><a href="' + user.website + '"target="blank">' + user.website + '</a></h4>' +
@@ -123,7 +134,7 @@ angular.module('gservice', [])
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
                 // getInfo();
 
-
+updateByGeo(selectedLat, selectedLong);
 // This is where to filter which markers get shown
                 if(usertype === "Skateboarding"){
                 skateboarding_locations.push({

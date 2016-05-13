@@ -60,9 +60,64 @@ display: table;
   border: 5px solid black;
 }
 
-/*
-.weather-app {
-    margin: auto;
+.weather-app-index{
+
+  color: white;
+  position: absolute;
+  top: 0;
+  /*right: 3.5%;*/
+  display: inline;
+  user-select: none;
+  pointer-events: none;
+  text-shadow: 2px 2px 2px black;
+}
+.bottom-index{
+  position: relative;
+  /*margin-left: 400px;*/
+  left: 500px;
+  /*width: 100px;*/
+  color: white;
+  /*text-shadow: 2px 2px black;*/
+}
+.left-index{
+  position: absolute;
+  left: 80%;
+}
+/*#icon-index{
+  position: absolute;
+  top: -20px;
+  margin-right: 100px;
+}*/
+.temperature-index{
+  position: absolute;
+  font-size: 3em;
+  /*color: white;*/
+  top: -10px;
+  left: 30px;
+  /*text-shadow: 2px 2px black;*/
+}
+.location-index{
+  position: absolute;
+  margin-left: 190px;
+  font-size: 20px;
+ /* color: white;
+
+  text-shadow: 2px 2px black;*/
+}
+
+#icon{
+  width: 120px;
+  position: absolute;
+  top: -25px;
+  left:  180px;
+}
+
+
+/*.weather-app {
+  display: inline;
+}*/
+
+/*    margin: auto;
     width: 300px;
     height: 160px;
     border: 1px solid black;
@@ -128,3 +183,4 @@ display: table;
 }
 
 */
+

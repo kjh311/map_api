@@ -12,6 +12,10 @@
     <link rel="icon" href="images/hiking2.png">
 
 
+    <!-- weather for google map -->
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?libraries=weather&sensor=false">
+    </script>
     <!-- Holder JS -->
     <script src="../bower_components/holderjs/holder.js"></script>
     <!-- Google Maps API -->
@@ -94,6 +98,33 @@
         <!-- Google Map -->
         <div class="col-md-7">
             <div id="map" style="width:645px; height:645px"></div>
+            <!-- Weather aPP -->
+<div class="weather-app weather-app-index">
+    <div class="weather-index-border">
+      <div class="left-index">
+    <div class="temperature-index"><span id="temperature">0</span>&deg;</div>
+    <div class="location-index"><span id="location">Unknown</span></div>
+      </div>
+      <div class="right-index">
+    <div class="top-index">
+      <img id="icon"  src="imgs/codes/" />
+    </div>
+
+      <div class="bottom-index">
+
+      <div class="humidity-index">
+        <img src="imgs/humidity.png" height="16px" />
+        <span id="humidity">0</span>%
+      </div>
+
+      <div class="wind-index">
+        <span id="wind">0</span> mph <span id="direction">N</span>
+      </div>
+
+    </div>
+      </div>
+    </div>
+    </div>
         </div>
 
 
@@ -280,31 +311,7 @@
     </div>
     <hr/>
 
-<!-- Weather aPP -->
-<div class="weather-app">
-      <div class="left">
-    <div class="temperature"><span id="temperature">0</span>&deg;</div>
-    <div class="location"><span id="location">Unknown</span></div>
-      </div>
-      <div class="right">
-    <div class="top">
-      <img id="icon" width="75px" src="imgs/codes/" />
-    </div>
 
-      <div class="bottom">
-
-      <div class="humidity">
-        <img src="imgs/humidity.png" height="16px" />
-        <span id="humidity">0</span>%
-      </div>
-
-      <div class="wind">
-        <span id="wind">0</span> mph <span id="direction">N</span>
-      </div>
-
-    </div>
-      </div>
-    </div>
 
 
 
