@@ -3,4 +3,4 @@ Info, Picture, weather conditions, surf report, snow report is displayed,
 allowing the user to see at a glance which activities are worth doing.
 
 
-![alt tag](images/mapAPIpic.png)
+![alt tag](public/images/mapAPIpic.png)
