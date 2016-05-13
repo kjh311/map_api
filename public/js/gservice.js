@@ -99,7 +99,7 @@ angular.module('gservice', [])
                 var  contentString =
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
 
-                    '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate3.png">' +
+                    '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate6.png">' +
                      // Weather widget
                    '<div class="weather-app">' +
                           '<div class="left">' +
@@ -185,7 +185,7 @@ angular.module('gservice', [])
 
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo" style="width:300px;maxheight:300px;border-radius:20px;" src="' + user.photo + '"></a>' +
                     '<h4> ' + user.description + '</h4>' +
-                    '<a href="' + user.website + '"></a>'
+                    '<a href="' + user.website + '"></a>' +
                     '<h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button></a></h4><button type="button" class="btn btn-info">EDIT Location</button></br></br><button type="button" class="btn btn-danger">DELETE Location</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">DIRECTIONS To:</button></button>'
                     '</p>';
@@ -544,7 +544,7 @@ angular.module('gservice', [])
         document.getElementById("sk8butt").style.color = "red";
 };
         // var icon = {
-        //     url: "/images/skate3.png"
+        //     url: "/images/skate6.png"
         // };
         // var marker = new google.maps.Marker({
         //     position: n.latlon,
@@ -589,7 +589,7 @@ var initialize = function(latitude, longitude) {
     // Loop through each SKATEBOARDING location in the array and place a marker
     skateboarding_locations.forEach(function(n, i){
         var icon = {
-            url: "/images/skate3.png"
+            url: "/images/skate6.png"
         };
         var marker = new google.maps.Marker({
             position: n.latlon,

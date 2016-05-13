@@ -7,3 +7,14 @@ allowing the user to see at a glance which activities are worth doing.
 
 
 Trello: https://trello.com/b/wVMsTWCf/out-and-about
+
+
+Technologies:
+
+  Mongo
+  Node
+  Express
+  AngularJS
+  Bootstrap
+  Angular-Route
+  Angularjs-Geolocation
