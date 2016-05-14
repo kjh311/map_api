@@ -21,7 +21,9 @@
     <!-- Google Maps API -->
     <!-- tutorial on hiding api keys -->
     <!-- https://www.linkedin.com/pulse/protect-your-api-keys-using-environment-variables-nodejs-dale-corns -->
-
+    <script>
+    // var GOOGLEKEY = 'process.env.googlekey';
+    </script>
     <!-- Modernizr -->
     <script src="../bower_components/modernizr/bin/modernizr"></script>
     <!-- JS Source -->
@@ -40,9 +42,9 @@
 </head>
 <body ng-controller="addCtrl">
 
-
-<!-- <h1>Out and About</h1> -->
-
+<!-- <div id="title">
+    <h1>OUT AND ABOUT</h1>
+</div> -->
 
 <div class="container">
     <div class="header">
@@ -60,10 +62,29 @@
         </div> -->
 
 
+       <!-- checkboxes -->
+        <div class="col-md-8">
+            <div class="panel panel-default ">
+                <!-- Panel Title -->
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center"> </br></h2>
+                </div>
+
+                <!-- <button type="button" class="btn btn-default">button</button> -->
+                <!-- <button id="sk8_button"  onclick="myFunction()">Skateboard</button> -->
+                <!-- <button id="sk8butt" onclick="findSk8Locals()">Find Sk8!</button> -->
+                  <!-- <label>Check me to check both:
+                    <input type="checkbox" ng-model="master"></label><br/>
+                    <input id="checkSlave" type="checkbox" ng-checked="master" aria-label="Slave input"> -->
+
+
+
 
         <!-- Google Map -->
-        <div class="col-md-7">
-            <div id="map" style="width:645px; height:645px"></div>
+        <div >
+            <div id="map" ></div>
+</br>
+
             <!-- Weather aPP -->
 <div class="weather-app weather-app-index">
     <div class="weather-index-border">
@@ -94,28 +115,8 @@
         </div>
 
 
-        <div style="position:absolute;z-index:-1;" id="loading-div">
-            <img src="http://apps.voxmedia.com/graphics/sbnation-nba-draft-meme/images/loader-427f86c0.gif" alt="">
-        </div>
 
 
-
-
-
-        <!-- checkboxes -->
-        <div class="col-md-5">
-            <div class="panel panel-default ">
-                <!-- Panel Title -->
-                <div class="panel-heading">
-                    <h2 class="panel-title text-center">Choose Your Activity!</h2>
-                </div>
-
-                <!-- <button type="button" class="btn btn-default">button</button> -->
-                <!-- <button id="sk8_button"  onclick="myFunction()">Skateboard</button> -->
-                <button id="sk8butt" onclick="findSk8Locals()">Find Sk8!</button>
-                  <!-- <label>Check me to check both:
-                    <input type="checkbox" ng-model="master"></label><br/>
-                    <input id="checkSlave" type="checkbox" ng-checked="master" aria-label="Slave input"> -->
 
 
                     <form ng-controller="ExampleController">
@@ -185,13 +186,16 @@
 
                     </form>
 
+
 </div>
 </div>
 
-
+<!--         <div style="position:absolute;z-index:-1;" id="loading-div">
+            <img id="loading" src="http://apps.voxmedia.com/graphics/sbnation-nba-draft-meme/images/loader-427f86c0.gif" alt="">
+        </div> -->
 
         <!-- Side Panel -->
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="panel panel-default">
                 <!-- Panel Title -->
                 <div class="panel-heading">
@@ -202,7 +206,7 @@
                     <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
                     <form name ="addForm" novalidate>
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
-                        <p><b>1. Add new location at your current position or click the map to change location.</b></p>
+                        <p><b>1. To add a new location to the map, first click the location on the map, otherwise skip this step to use your current position.</b></p>
 
               <!--           <div class="form-group">
                             <label for="usertype">2. Type of Location <span class="badge">Required</span></label>
