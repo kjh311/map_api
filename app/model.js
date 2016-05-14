@@ -23,7 +23,7 @@ UserSchema.pre('save', function(next){
         this.created_at = now
     }
     next();
-    console.log('user created model.js 27');
+    console.log('user created model.js');
 });
 
 // Indexes this schema in 2dsphere format (critical for running proximity searches)
