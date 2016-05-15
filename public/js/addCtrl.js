@@ -117,6 +117,10 @@ window.onload = function (){
 // where user's location should be
 // updateByGeo(pos.coords.latitude,pos.coords.longitude);
 }
+
+
+
+
  // google.maps.event.addDomListener(window, 'load',
  //    googleMapService.refresh(selectedLat, selectedLong));
 

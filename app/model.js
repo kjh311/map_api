@@ -15,6 +15,7 @@ var UserSchema = new Schema({
     updated_at: {type: Date, default: Date.now}
 });
 
+
 // Sets the created_at parameter equal to the current time
 UserSchema.pre('save', function(next){
     now = new Date();
@@ -30,6 +31,6 @@ UserSchema.pre('save', function(next){
 UserSchema.index({location: '2dsphere'});
 
 // Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "scotch-users"
-module.exports = mongoose.model('rubbish', UserSchema);
+module.exports = mongoose.model('fuck-head', UserSchema);
 // fuck-head was the previous
 // rubbish is actual locations

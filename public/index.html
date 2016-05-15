@@ -23,6 +23,7 @@
     <!-- https://www.linkedin.com/pulse/protect-your-api-keys-using-environment-variables-nodejs-dale-corns -->
     <script>
     // var GOOGLEKEY = 'process.env.googlekey';
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLyTi6NTn6wr8M6Cek6r68d1mrlrZJ30"></script>
     </script>
     <!-- Modernizr -->
     <script src="../bower_components/modernizr/bin/modernizr"></script>
@@ -119,67 +120,67 @@
 
 
 
-                    <form ng-controller="ExampleController">
+                    <form>
 
                         <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" ng-check="button()" class="check" id="checkbox_skate">
+                                <input type="checkbox" value="skateboarding" class="check" id="checkbox_skateboarding" checked>
                                 Skateboarding
                             </label>
                         </div>
 
                         <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" value="scuba" class="check" id="checkbox_scuba">
-                                Scuba Diving
+                                <input type="checkbox" value="scuba" class="check" id="checkbox_scuba" checked>
+                                Snorkeling
                             </label>
                         </div>
 
                         <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" value="hiking" class="check" id="checkbox_hiking">
+                                <input type="checkbox" value="hiking" class="check" id="checkbox_hiking" checked>
                                 Hiking
                             </label>
                         </div>
 
                          <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" value="camping" class="check" id="checkbox_camping">
+                                <input type="checkbox" value="camping" class="check" id="checkbox_camping" checked>
                                 Camping
                             </label>
                         </div>
 
                          <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" value="surfing" class="check" id="checkbox_surfing">
+                                <input type="checkbox" value="surfing" class="check" id="checkbox_surfing" checked>
                                 Surfing
                             </label>
                         </div>
 
                          <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" value="photography" class="check" id="checkbox_photography">
+                                <input type="checkbox" value="photography" class="check" id="checkbox_photography" checked>
                                 Photography
                             </label>
                         </div>
 
                          <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" value="mountain_biking" class="check" id="checkbox_mountain_biking">
+                                <input type="checkbox" value="mountain_biking" class="check" id="checkbox_mountain_biking" checked>
                                 Mountain Biking
                             </label>
                         </div>
 
                          <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" value="basketball" class="check" id="checkbox_basketball">
+                                <input type="checkbox" value="basketball" class="check" id="checkbox_basketball" checked>
                                 Basketball
                             </label>
                         </div>
 
                          <div class="checkbox-inline">
                             <label>
-                                <input type="checkbox" value="brewery" class="check" id="checkbox_brewery">
+                                <input type="checkbox" value="brewery" class="check" id="checkbox_brewery" checked>
                                 Brewery
                             </label>
                         </div>
@@ -215,7 +216,7 @@
                          <div class="form-group">
                             <label for="usertype">2. Type of Location <span class="badge">Required</span></label>
                         </br>
-                             <select id="type_dropdown" ng-model="formData.type" required>
+                             <select id="type_dropdown" class="input-block-level" ng-model="formData.type" required>
                               <option value="Activity_Type" disabled selected>Activity Type</option>
                               <option value="Skateboarding" required>Skateboarding</option>
                               <option value="Scuba">Snorkeling/Scuba Diving</option>

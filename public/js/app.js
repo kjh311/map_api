@@ -12,5 +12,6 @@ var app = angular.module('meanMapApp', ['addCtrl', 'geolocation', 'gservice'])
   window.alert('button works');
 };
 
+
     }]);
 
