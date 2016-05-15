@@ -1,5 +1,5 @@
 {
-  "name": "outandabout",
+  "name": "OutAndAbout",
   "start": "server.js",
   "dependencies": {
     "angular-route": "^1.5.5",
