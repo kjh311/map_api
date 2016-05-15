@@ -1,6 +1,6 @@
 {
   "name": "MeanMapsApp",
-  "main": "server.js"
+  "main": "server.js",
   "dependencies": {
     "angular-route": "^1.5.5",
     "angularjs-geolocation": "^0.1.3",
