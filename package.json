@@ -1,5 +1,5 @@
 {
-  "name": "MeanMapsApp",
+  "name": "OutAndAbout",
   "main": "server.js",
   "dependencies": {
     "angular-route": "^1.5.5",
@@ -19,6 +19,6 @@
     "npm": "^3.8.9"
   },
   "engines": {
-    "node": "0.0.0"
+    "node": "*"
   }
 }
