@@ -12,7 +12,7 @@ var app             = express();
 // Express Configuration
 // -----------------------------------------------------
 // Sets the connection to MongoDB
-mongoose.connect("mongodb:https://outandabout.herokuapp.com/");
+mongoose.connect("mongodb://localhost/MeanMapApp");
 
 
 // Logging and Parsing
