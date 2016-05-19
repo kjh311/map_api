@@ -1,4 +1,4 @@
-1"Out and About" adds activity locations to a Google Map.
+"Out and About" adds activity locations to a Google Map.
 Info, Picture, weather conditions, surf report, snow report, driving directions is displayed,
 allowing the user to see at a glance which activities are worth doing.
 
@@ -7,6 +7,7 @@ allowing the user to see at a glance which activities are worth doing.
 
 
 Trello: https://trello.com/b/wVMsTWCf/out-and-about
+
 
 
 Technologies:
