@@ -204,8 +204,9 @@ window.onload = function (){
 // ...
 
 // Refresh the map with new data
+setTimeout(function(){
 gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
-
+}, 50);
     };
 
 });
