@@ -10,7 +10,7 @@ var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
 var app             = express();
 var env = process.env.NODE_ENV || 'development'
-  , config = require('./config/config')[env]
+  , config = require('.config')[env]
   // , mongoose = require('mongoose')
 
 
