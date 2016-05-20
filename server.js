@@ -9,13 +9,18 @@ var morgan          = require('morgan');
 var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
 var app             = express();
+var env = process.env.NODE_ENV || 'development'
+  , config = require('./config/config')[env]
+  // , mongoose = require('mongoose')
 
+
+mongoose.connect(config.db)
 
 
 // Express Configuration
 // -----------------------------------------------------
 // Sets the connection to MongoDB
-mongoose.connect("mongodb://localhost/MeanMapApp");
+// mongoose.connect("mongodb://localhost/MeanMapApp");
 
 
 // Logging and Parsing
