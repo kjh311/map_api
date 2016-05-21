@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" href="images/hiking2.png">
 
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
 
     <!-- weather for google map -->
     <script type="text/javascript"
@@ -47,7 +52,6 @@
     <h1>OUT AND ABOUT</h1>
 </div> -->
 
-
 <div class="container">
     <div class="header">
        <!--  <ul class="nav nav-pills pull-right">
@@ -65,7 +69,7 @@
 
 
        <!-- checkboxes -->
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="panel panel-info ">
                 <!-- Panel Title -->
                 <div class="panel-heading">
@@ -121,87 +125,85 @@
 
 
 
-                    <form>
+        <form>
 
-                        <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="skateboarding" class="check" id="checkbox_skateboarding" checked>
-                                Skateboarding
-                            </label>
-                        </div>
+            <div id="sk8" class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="skateboarding" class="check" id="checkbox_skateboarding" checked>
+                    Skateboarding
+                </label>
+            </div>
 
-                        <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="scuba" class="check" id="checkbox_scuba" checked>
-                                Snorkeling
-                            </label>
-                        </div>
+            <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="scuba" class="check" id="checkbox_scuba" checked>
+                    Snorkeling
+                </label>
+            </div>
 
-                        <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="hiking" class="check" id="checkbox_hiking" checked>
-                                Hiking
-                            </label>
-                        </div>
+            <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="hiking" class="check" id="checkbox_hiking" checked>
+                    Hiking
+                </label>
+            </div>
 
-                         <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="camping" class="check" id="checkbox_camping" checked>
-                                Camping
-                            </label>
-                        </div>
+             <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="camping" class="check" id="checkbox_camping" checked>
+                    Camping
+                </label>
+            </div>
 
-                         <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="surfing" class="check" id="checkbox_surfing" checked>
-                                Surfing
-                            </label>
-                        </div>
+             <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="surfing" class="check" id="checkbox_surfing" checked>
+                    Surfing
+                </label>
+            </div>
 
-                         <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="photography" class="check" id="checkbox_photography" checked>
-                                Photography
-                            </label>
-                        </div>
+             <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="photography" class="check" id="checkbox_photography" checked>
+                    Photography
+                </label>
+            </div>
 
-                         <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="mountain_biking" class="check" id="checkbox_mountain_biking" checked>
-                                Mountain Biking
-                            </label>
-                        </div>
+             <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="mountain_biking" class="check" id="checkbox_mountain_biking" checked>
+                    Mountain Biking
+                </label>
+            </div>
 
-                         <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="basketball" class="check" id="checkbox_basketball" checked>
-                                Basketball
-                            </label>
-                        </div>
+             <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="basketball" class="check" id="checkbox_basketball" checked>
+                    Basketball
+                </label>
+            </div>
 
-                         <div class="checkbox-inline">
-                            <label>
-                                <input type="checkbox" value="brewery" class="check" id="checkbox_brewery" checked>
-                                Brewery
-                            </label>
-                        </div>
+             <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="brewery" class="check" id="checkbox_brewery" checked>
+                    Brewery
+                </label>
+            </div>
 
-                    </form>
+        </form>
 
 
 </div>
 </div>
 
-<!--         <div style="position:absolute;z-index:-1;" id="loading-div">
-            <img id="loading" src="http://apps.voxmedia.com/graphics/sbnation-nba-draft-meme/images/loader-427f86c0.gif" alt="">
-        </div> -->
+
 
         <!-- Side Panel -->
-        <div class="col-md-12">
+        <div class="col-md-4">
             <div class="panel panel-info">
                 <!-- Panel Title -->
                 <div class="panel-heading">
-                    <h2 class="panel-title text-center">Add New Activity Location! <span class="glyphicon glyphicon-map-marker"></span></h2>
+                    <h2 class="panel-title text-center new-activity">Add New Activity Location! <span class="glyphicon glyphicon-map-marker"></span></h2>
                 </div>
                 <!-- Panel Body -->
                 <div class="panel-body">
@@ -236,52 +238,52 @@
                         <!-- <img style="width:300px;maxheight:300px;" src="http://www.aussiediversphuket.com/wp-content/uploads/2015/07/scuba-diving-phuket-with-aussie-divers.jpg"> -->
 
 
-                        <div class="form-group">
-                            <label for="username">3. Name of Location <span class="badge">Required</span></label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter Name of Location" ng-model="formData.name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="username">4. Description  <span class="badge">Required</span></label>
-                            <textarea rows="4" cols="50"  type="text" class="form-control" id="description" placeholder="Please enter a description" ng-model="formData.description" required>
-
-                            </textarea>
-                        </div>
-
-                  <!--       <div class="form-group">
-                            <label for="website">5. Website / Additional Info <span class="badge">Optional</span></label>
-                            <input type="text" class="form-control" id="website" placeholder="Enter Website URL" ng-model="formData.website">
-                        </div> -->
-
-                        <div class="form-group">
-                            <label for="username">5. Photo <span class="badge">Optional</span></label>
-                            <input type="text" class="form-control" id="photo" placeholder="Enter URL of Photo" ng-model="formData.photo">
-                        </div>
-
-
-
-
-                        <div class="form-group hidden">
-                            <label for="latitude">Latitude</label>
-                            <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
-                        </div>
-                        <div class="form-group hidden">
-                            <label for="longitude">Longitude</label>
-                            <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
-                        </div>
-                        <div class="form-group hidden">
-                            <label for="verified">HTML5 Verified Location? <span><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
-                            <input type="text" class="form-control" id="verified" placeholder= "Nope (Thanks for spamming my map...)" ng-model="formData.htmlverified" readonly>
-                        </div>
-                        <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
-                        <!-- <button type="submit" class="btn btn-danger btn-block" ng-disabled="addForm.$invalid">Submit</button> -->
-                        <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Submit</button>
-                    </form>
+                <div class="form-group">
+                    <label for="username">3. Name of Location <span class="badge">Required</span></label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name of Location" ng-model="formData.name" required>
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="username">4. Description  <span class="badge">Required</span></label>
+                    <textarea rows="4" cols="50"  type="text" class="form-control" id="description" placeholder="Please enter a description" ng-model="formData.description" required>
+
+                    </textarea>
+                </div>
+
+          <!--       <div class="form-group">
+                    <label for="website">5. Website / Additional Info <span class="badge">Optional</span></label>
+                    <input type="text" class="form-control" id="website" placeholder="Enter Website URL" ng-model="formData.website">
+                </div> -->
+
+                <div class="form-group">
+                    <label for="username">5. Photo <span class="badge">Optional</span></label>
+                    <input type="text" class="form-control" id="photo" placeholder="Enter URL of Photo" ng-model="formData.photo">
+                </div>
+
+
+
+
+                <div class="form-group hidden">
+                    <label for="latitude">Latitude</label>
+                    <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
+                </div>
+                <div class="form-group hidden">
+                    <label for="longitude">Longitude</label>
+                    <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
+                </div>
+                <div class="form-group hidden">
+                    <label for="verified">HTML5 Verified Location? <span><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
+                    <input type="text" class="form-control" id="verified" placeholder= "Nope (Thanks for spamming my map...)" ng-model="formData.htmlverified" readonly>
+                </div>
+                <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
+                <!-- <button type="submit" class="btn btn-danger btn-block" ng-disabled="addForm.$invalid">Submit</button> -->
+                <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Submit</button>
+            </form>
         </div>
     </div>
-    <hr/>
+</div>
+</div>
+<hr/>
 
 
 
@@ -289,7 +291,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <p class="text-center"></span> Created with <span class="glyphicon glyphicon-heart"></span> by <a href="http://kjh311.github.io/Kevin_Huelsmann_Portfolio/" target="blank">Kevin Huelsmann</a>
+        <p class="text-center white-text"></span> Created with <span class="glyphicon glyphicon-heart"></span> by <a href="http://kjh311.github.io/Kevin_Huelsmann_Portfolio/" target="blank">Kevin Huelsmann</a>
 
     </div>
 </div>

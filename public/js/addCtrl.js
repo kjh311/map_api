@@ -204,9 +204,10 @@ window.onload = function (){
 // ...
 
 // Refresh the map with new data
+// settimeout to give time to add to DB before refresh
 setTimeout(function(){
 gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
-}, 50);
+}, 100);
     };
 
 });

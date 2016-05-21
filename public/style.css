@@ -1,14 +1,25 @@
+*{
+  /*font-family: 'Gloria Hallelujah', 'Arial', cursive;*/
+  /*font-family: 'Fugaz One', 'Arial', cursive;*/
+  /*font-family: 'Kalam', 'Arial', cursive;*/
+  font-family: 'Bubblegum Sans', cursive;
+}
 body{
   user-select: none;
-  font-size: 18px;
+  font-size: 23px;
   background-color: black;
   width: 100%;
+}
+.white-text{
+  color: white;
 }
 button{
   margin-right: 10px;
   margin-top: 10px;
 }
-
+#sk8{
+  margin-left: 10px;
+}
 .check{
   padding-left:  30px;
 }
@@ -66,7 +77,11 @@ display: table;
    display: inline;
    position: relative;
    }
-
+.new-activity{
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-size: 0.9em;
+}
 #type_dropdown{
   width: 100%;
 }
@@ -81,7 +96,6 @@ display: table;
 }
 
 .weather-app-index{
-
   color: white;
   position: absolute;
   top: -14px;
@@ -111,10 +125,10 @@ display: table;
 }*/
 .temperature-index{
   position: absolute;
-  font-size: 2.5em;
+  font-size: 1.5em;
   /*color: white;*/
-  top: 0px;
-  left: 210px;
+  top: 10px;
+  left: 250px;
   /*text-shadow: 2px 2px black;*/
 }
 .location-index{
@@ -123,28 +137,24 @@ display: table;
   font-size: 25px;
   width: 300px;
   top: 15px;
- /* color: white;
-
-  text-shadow: 2px 2px black;*/
 }
 
 .humidity-index{
   position: relative;
+  top: -5px;
   /*left: 350px;*/
 }
 .wind-index{
   position: relative;
-  top: -25px;
+  top: -37px;
   left: 100px;
 }
-
 #icon{
-  width: 90px;
+  width: 80px;
   position: absolute;
-  top: -10px;
+  top: -4px;
   left:  200px;
 }
-
 #title{
   text-align: center;
   color: white;
@@ -235,13 +245,16 @@ display: table;
     max-width: 300px;
   }
   .bottom-index{
-    opacity: 0;
+    visibility: hidden;
   }
   .location-index{
     /*opacity: 0;*/
   }
   .popup_photo{
     width: 250px;
+  }
+  .temperature-index{
+    left: 230px;
   }
 }
 

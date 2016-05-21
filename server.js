@@ -2,7 +2,7 @@
 // Dependencies
 // -----------------------------------------------------
 var express         = require('express');
-var http =            require('http');
+// var http =            require('http');
 var mongoose        = require('mongoose');
 var port            = process.env.PORT || 3000;
 var morgan          = require('morgan');
