@@ -22,6 +22,9 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 // http://api.opennweathermap.org/data/2.5/weather?lat=35&lon=139&appid=e43c18b3b50f85a765b1c8ee556b0ebe
 // weather API key
 var APPID = "e43c18b3b50f85a765b1c8ee556b0ebe";
+
+// get lost, api key!!!
+// var APPID = '<%= process.env.WEATHERAPIKEY' %>;
 var temp;
 var loc;
 var icon;

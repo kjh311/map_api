@@ -9,7 +9,7 @@ var morgan          = require('morgan');
 var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
 var app             = express();
-
+require('dotenv').config();
 
 
 // Express Configuration

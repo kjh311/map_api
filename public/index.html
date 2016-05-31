@@ -27,8 +27,8 @@
     <!-- tutorial on hiding api keys -->
     <!-- https://www.linkedin.com/pulse/protect-your-api-keys-using-environment-variables-nodejs-dale-corns -->
     <script>
-    // var GOOGLEKEY = 'process.env.googlekey';
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLyTi6NTn6wr8M6Cek6r68d1mrlrZJ30"></script>
+    var GOOGLEKEY = 'process.env.GOOGLEKEY';
+    // <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLyTi6NTn6wr8M6Cek6r68d1mrlrZJ30"></script>
     </script>
     <!-- Modernizr -->
     <script src="../bower_components/modernizr/bin/modernizr"></script>
@@ -210,7 +210,7 @@
                     <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
                     <form name ="addForm" novalidate>
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
-                        <pclass="location-instruction" ><b>1. To add a new location to the map, first click the location on the map, otherwise skip this step to use your current position.</b></p>
+                        <pclass="location-instruction" ><b>1. To add a new location, first click the location on the map, otherwise skip this step to use your current position.</b></p>
 
               <!--           <div class="form-group">
                             <label for="usertype">2. Type of Location <span class="badge">Required</span></label>
