@@ -207,7 +207,7 @@ window.onload = function (){
 // settimeout to give time to add to DB before refresh
 setTimeout(function(){
 gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
-}, 100);
+}, 200);
     };
 
 });

@@ -13,9 +13,18 @@ body{
 .white-text{
   color: white;
 }
+.badge{
+  font-size: .7em;
+}
 button{
   margin-right: 10px;
   margin-top: 10px;
+}
+.location-instruction{
+  font-size: 1.2em;
+}
+.input-instruction{
+  font-size: .7em;
 }
 #sk8{
   margin-left: 10px;

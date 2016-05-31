@@ -22,6 +22,8 @@ module.exports = function(app) {
         });
     });
 
+
+
     // POST Routes
     // --------------------------------------------------------
     // Provides method for saving new users in the db
@@ -39,6 +41,42 @@ module.exports = function(app) {
             // If no errors are found, it responds with a JSON of the new user
             res.json(req.body);
         });
+
+        // get one user
+    app.get("/users/:id", function(req, res) {
+  db.collection(test).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
+    if (err) {
+      handleError(res, err.message, "Failed to get user");
+    } else {
+      res.status(200).json(doc);
+    }
+  });
+});
+
+// patch one user
+    app.put("/users/:id", function(req, res) {
+  var updateDoc = req.body;
+  delete updateDoc._id;
+
+  db.collection(test).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
+    if (err) {
+      handleError(res, err.message, "Failed to update user");
+    } else {
+      res.status(204).end();
+    }
+  });
+});
+
+// delete one user
+  app.delete("/users/:id", function(req, res) {
+  db.collection(test).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
+    if (err) {
+      handleError(res, err.message, "Failed to delete user");
+    } else {
+      res.status(204).end();
+    }
+  });
+});
 
     });
 
