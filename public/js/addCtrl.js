@@ -42,7 +42,7 @@ function updateByZip(zip) {
 }
 
 function updateByGeo(lat, lon) {
-  var url = "http://api.openweathermap.org/data/2.5/weather?" +
+  var url = "https://api.openweathermap.org/data/2.5/weather?" +
     "lat=" + laty +
     "&lon=" + longy +
     "&APPID=" + APPID;
