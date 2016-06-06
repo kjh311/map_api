@@ -1,5 +1,10 @@
 // Creates the addCtrl Module and Controller. Note that it depends on the 'geolocation' module and service.
 
+// forecast.io api key
+// 3230f84c79e173d82bf07aa89fa056b8
+
+
+
 var addCtrl = angular.module('addCtrl', ['geolocation', 'gservice']);
 addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, gservice){
 
