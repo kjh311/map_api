@@ -8,9 +8,7 @@ var app = angular.module('meanMapApp', ['addCtrl', 'geolocation', 'gservice'])
        value2 : 'YES'
      };
 
-     $scope.button = function() {
-  window.alert('button works');
-};
+
 
 
     }]);

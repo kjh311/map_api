@@ -1,5 +1,6 @@
 "Out and About" adds activity locations to a Google Map.
-Info, Picture, weather conditions, surf report, snow report, driving directions is displayed,
+
+Info, Picture, weather conditions, surf report, snow report, driving directions are displayed,
 allowing the user to see at a glance which activities are worth doing.
 
 ![alt tag](public/images/mapAPIpic.png)
