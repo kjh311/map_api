@@ -101,30 +101,10 @@ angular.module('gservice', [])
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate6.png">' +
                      // Weather widget
-                   '<div class="weather-app">' +
-                          '<div class="left">' +
-                        '<div class="temperature"><span id="temperature">0</span>&deg;</div>' +
-                        '<div class="location"><span id="location">Unknown</span></div>' +
-                          '</div>' +
-                          '<div class="right">' +
-                        '<div class="top">' +
-                          '<img id="icon" src="imgs/codes/" />' +
-                        '</div>' +
 
-                          '<div class="bottom">' +
 
-                          '<div class="humidity">' +
-                            '<img src="imgs/humidity.png" height="16px" />' +
-                            '<span id="humidity">0</span>%' +
-                          '</div>' +
 
-                          '<div class="wind">' +
-                            '<span id="wind">0</span> mph <span id="direction">N</span>' +
-                          '</div>' +
 
-                        '</div>' +
-                          '</div>' +
-                        '</div>' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img  class="popup_photo"  src="' + user.photo + '"></a>' +
                     // '<h4><a href="' + user.website + '"target="blank">' + user.website + '</a></h4>' +
@@ -810,7 +790,7 @@ google.maps.event.addListener(map, 'click', function(e){
         position: e.latLng,
         // animation: google.maps.Animation.DROP,
         map: map,
-        icon: 'http://mapbullet.com/map/images/find.png'
+        icon: 'images/new-location.png'
     });
 
     // When a new spot is selected, delete the old red bouncing marker

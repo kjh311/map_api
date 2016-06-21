@@ -4,9 +4,7 @@
   /*font-family: 'Kalam', 'Arial', cursive;*/
   font-family: 'Bubblegum Sans', cursive;
 }
-a{
-  border: 1px solid white;
-}
+
 body{
   user-select: none;
   font-size: 23px;
@@ -45,6 +43,9 @@ button{
 .hidden{
   visibility: none;
 }
+.homepage-container{
+  margin-top: -10px;
+}
 
 #map{
   /*width: 645px;*/
@@ -59,6 +60,7 @@ content: "";
 display: table;
 }
 
+
 /*.checkbox{
   display: inline-block;
   padding-right:  30px;
@@ -68,6 +70,10 @@ display: table;
 .nav-wrapper {
    width:100%;
    background: #999;
+}
+.mini-icons{
+  width: 30px;
+  height: 30px;
 }
 
 .nav-menu {
@@ -261,6 +267,9 @@ display: table;
   }
   }
 @media (max-width: 900px) {
+  .checkbox-inline label{
+    font-size: .9em;
+  }
   #map{
     width: 100%;
     height: 350px;
@@ -274,6 +283,7 @@ display: table;
   .location-index{
     /*opacity: 0;*/
   }
+
   .popup_photo{
     width: 250px;
   }
