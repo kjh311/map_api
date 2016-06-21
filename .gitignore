@@ -1,1 +1,6 @@
-*.js
+addCtrl.js
+
+#in order to hide specific files:
+#git rm -r --cached .
+#git add .
+#git commit -m "fixed untracked files"
