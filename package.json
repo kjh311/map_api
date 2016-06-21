@@ -12,6 +12,7 @@
     "bower": "^1.7.9",
     "dotenv": "^2.0.0",
     "express": "~4.7.2",
+    "forecastio": "^1.0.1",
     "gulp": "^3.9.1",
     "jsonwebtoken": "^5.0.2",
     "method-override": "~2.1.2",
@@ -20,6 +21,7 @@
     "morgan": "~1.2.2",
     "node-gitignore": "^1.0.7",
     "nodemon": "^1.9.2",
-    "npm": "^3.8.9"
+    "npm": "^3.8.9",
+    "reckon": "0.0.1"
   }
 }

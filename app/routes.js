@@ -2,6 +2,16 @@
 var mongoose        = require('mongoose');
 var User            = require('./model.js');
 
+// not sure where this goes
+// https://github.com/soplakanets/node-forecastio
+// var ForecastIo = require('forecastio');
+
+// var forecastIo = new ForecastIo('3230f84c79e173d82bf07aa89fa056b8');
+// forecastIo.forecast('51.506', '-0.127').then(function(data) {
+//   console.log(JSON.stringify(data, null, 2));
+// });
+
+
 // Opens App Routes
 module.exports = function(app) {
 

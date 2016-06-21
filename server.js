@@ -15,10 +15,17 @@ require('dotenv').config();
 // Express Configuration
 // -----------------------------------------------------
 // Sets the connection to MongoDB
-// mongoose.connect("mongodb://localhost/MeanMapApp");
-// mongoose.connect("mongodb://kjh311:kev69kev@jello.modulusmongo.net:27017/ixi9nemE");
-mongoose.connect("mongodb://kjh311:blahblah@jello.modulusmongo.net:27017/inOwuz4o");
+mongoose.connect("mongodb://localhost/MeanMapApp");
+// mongoose.connect("mongodb://kjh311:blahblah@jello.modulusmongo.net:27017/inOwuz4o");
 
+// mongoose.connect("mongodb://kjh311:blahblah@jello.modulusmongo.net:27017/Qarege8r");
+
+// mongoose.connect("mongodb://kjh311:blahblah@jello.modulusmongo.net:27017/sIn4ydor");
+// mongoose.connect("mongodb://kevdog:kevkev@jello.modulusmongo.net:27017/rUhome2n");
+// mongodb://<user>:<pass>@jello.modulusmongo.net:27017/rUhome2n
+
+// mongodb://<user>:<pass>@jello.modulusmongo.net:27017/sIn4ydor
+// mongodb://<user>:<pass>@jello.modulusmongo.net:27017/Qarege8r
 
 // Logging and Parsing
 app.use(express.static(__dirname + '/public'));                 // sets the static files location to public

@@ -9,7 +9,18 @@ var addCtrl = angular.module('addCtrl', ['geolocation', 'gservice']);
 addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, gservice){
 
 
+  function b(){
 
+            var apiKey = '3230f84c79e173d82bf07aa89fa056b8/34.291852';
+            var url = 'https://api.forecast.io/forecast/';
+            var lati = 0;
+            var longi = 0;
+            var data;
+
+            $.getJSON(url + apiKey + "/" + lati + "," + longi + "?callback=?", function(data) {
+              $('#weather').innerHTML('and the weather is: ' + data[4].temperature);
+            });
+        }
 
     // Initializes Variables
     // ----------------------------------------------------------------------------

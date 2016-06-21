@@ -168,6 +168,11 @@ display: table;
   text-align: center;
   color: white;
 }
+.title-text{
+  color: white;
+  font-size: 1em;
+  text-shadow: 2px 2px 2px black;
+}
 
 
 /*.weather-app {
