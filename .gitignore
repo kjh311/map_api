@@ -1,5 +1,5 @@
 addCtrl.js
-*.env
+.env
 
 #in order to hide specific files that have already been commited:
 #git rm -r --cached .
