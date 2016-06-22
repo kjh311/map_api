@@ -100,15 +100,12 @@ angular.module('gservice', [])
                     '<p><h2 style="display:inline;"> ' + user.name + '</h2>' +
 
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/skate6.png">' +
-                     // Weather widget
-
-
 
 
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img  class="popup_photo"  src="' + user.photo + '"></a>' +
                     // '<h4><a href="' + user.website + '"target="blank">' + user.website + '</a></h4>' +
-                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button></a><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger" ng-model="formData.id">DELETE</button>'
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></button></a></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger" ng-model="formData.id">DELETE</button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -166,8 +163,8 @@ angular.module('gservice', [])
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo"  src="' + user.photo + '"></a>' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.website + '"></a>' +
-                    '<h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
-                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button>'
+                    '<h4><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></button></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -213,7 +210,7 @@ angular.module('gservice', [])
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/hiking2.png">' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo"  src="' + user.photo + '"></a>' +
-                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button></a><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></button></a></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button>'
                     '</p>';
 
@@ -261,7 +258,7 @@ angular.module('gservice', [])
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/camping.png">' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo"  src="' + user.photo + '"></a>' +
-                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></a><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></a></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button>'
                     '</p>';
 
@@ -307,7 +304,7 @@ angular.module('gservice', [])
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/surf4.png">' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo"  src="' + user.photo + '"></a>' +
-                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></a><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></a></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button>'
                     '</p>';
 
@@ -353,8 +350,8 @@ angular.module('gservice', [])
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/camera6.png">' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo"  src="' + user.photo + '"></a>' +
-                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></a><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
-                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button>'
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></a></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -399,7 +396,7 @@ angular.module('gservice', [])
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/bike2.png">' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo"  src="' + user.photo + '"></a>' +
-                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></a><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></a></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
                     // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button>'
                     '</p>';
 
@@ -445,8 +442,8 @@ angular.module('gservice', [])
                     '<img style="display:inline;float:right;"  class="popup_icon" src="/images/basket.png">' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo"  src="' + user.photo + '"></a>' +
-                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></a><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
-                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button>'
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></a></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -490,8 +487,8 @@ angular.module('gservice', [])
                     '<img style="display:inline;float:right;" class="popup_icon" src="/images/beer3.png">' +
                     '<h3> ' + user.description + '</h3>' +
                     '<a href="' + user.photo + '"target="blank"><img class="popup_photo"  src="' + user.photo + '"></a>' +
-                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></a><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
-                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS</button></button>'
+                    '</br></br><a href="https://www.google.com/maps/dir/Current+Location/'+ user.location[1] + ',' + user.location[0] + '" target="blank"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></a></br><button type="button" class="btn btn-info">EDIT</button><button type="button" class="btn btn-danger">DELETE</button>'
+                    // '<button type="button" class="btn btn-primary"><button type="button" class="btn btn-primary directions">GET DIRECTIONS to ' + user.name + '</button></button>'
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
