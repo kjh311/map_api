@@ -4,7 +4,7 @@
 
 
 var weather = angular.module('weather', ['geolocation', 'gservice']);
-addCtrl.controller('weather', function($scope, $http, $rootScope, geolocation, gservice){
+weather.controller('weather', function($scope, $http, $rootScope, geolocation, gservice){
 
 
   function b(){
