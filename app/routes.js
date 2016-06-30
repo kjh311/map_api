@@ -1,6 +1,8 @@
 // Dependencies
+// var express         = require('express');
 var mongoose        = require('mongoose');
 var User            = require('./model.js');
+// var router          = express.Router();
 
 // not sure where this goes
 // https://github.com/soplakanets/node-forecastio
@@ -18,13 +20,14 @@ module.exports = function(app) {
     // GET Routes
     // --------------------------------------------------------
     // Retrieve records for all users in the db
-    app.get('/users', function(req, res){
+    app.get('/users', function(req, res, next) {
 
         // Uses Mongoose schema to run the search (empty conditions)
         var query = User.find({});
         query.exec(function(err, users){
             if(err)
                 res.send(err);
+
 
             // If no errors are found, it responds with a JSON of all users
             res.json(users);
@@ -37,13 +40,13 @@ module.exports = function(app) {
     // POST Routes
     // --------------------------------------------------------
     // Provides method for saving new users in the db
-    app.post('/users', function(req, res){
+    app.post('/users', function(req, res, next){
 
-        // Creates a new User based on the Mongoose schema and the post bo.dy
-        var newuser = new User(req.body);
+        // Creates a new User based on the Mongoose schema and the post body
+        var newUser = new User({type: req.body.type, name: req.body.name, description: req.body.description, website: req.body.website, photo: req.body.photo, location: req.body.location});
 
         // New User is saved in the db.
-        newuser.save(function(err){
+        newUser.save(function(err){
             console.log('new user posted to db routes.js');
             if(err)
                 res.send(err);
@@ -52,44 +55,51 @@ module.exports = function(app) {
             res.json(req.body);
         });
 
-        // get one user
-    app.get("/users/:id", function(req, res) {
-  db.collection(test).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
-    if (err) {
-      handleError(res, err.message, "Failed to get user");
-    } else {
-      res.status(200).json(doc);
-    }
-  });
+//         // get one user
+//     app.get("/users/:id", function(req, res) {
+//   db.collection(test).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
+//     if (err) {
+//       handleError(res, err.message, "Failed to get user");
+//     } else {
+//       res.status(200).json(doc);
+//     }
+//   });
+// });
+
+//PATCH
+app.put('/users/:id', function(req, res, next) {
+    var id = {_id: req.params.id};
+    var update = {type: req.body.type, name: req.body.name, description: req.body.description, website: req.body.website, photo: req.body.photo, location: req.body.location};
+    var options = {new: true};
+
+    User.findOneAndUpdate(id, update, options, function(err, data){
+        if (err) {
+            res.json(err.message);
+
+        }
+        else {
+            res.json(data);
+        }
+    });
 });
 
-// patch one user
-    app.put("/users/:id", function(req, res) {
-  var updateDoc = req.body;
-  delete updateDoc._id;
 
-  db.collection(test).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
-    if (err) {
-      handleError(res, err.message, "Failed to update user");
-    } else {
-      res.status(204).end();
-    }
-  });
-});
-
-// delete one user
-  app.delete("/users/:id", function(req, res) {
-  db.collection(test).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
-    if (err) {
-      handleError(res, err.message, "Failed to delete user");
-    } else {
-      res.status(204).end();
-    }
-  });
+//DELETE
+app.delete('/users/:id', function(req, res, next) {
+    User.findOneAndRemove({_id: req.params.id}, function(err, data){
+        if (err) {
+          res.json({message: 'cant delete cause I suck.'});
+            res.json(err.message);
+        }
+        else if (data.length===0) {
+            res.json({message: 'A user with that id does not exist in this database.'});
+        }
+        else {
+            res.json({message: 'Success. Item deleted.'});
+        }
+    });
 });
 
     });
-
-
 };
 

@@ -9,16 +9,17 @@ var morgan          = require('morgan');
 var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
 var app             = express();
-require('dotenv').config();
+// require('dotenv').config();
 
 
 // Express Configuration
 // -----------------------------------------------------
 // Sets the connection to MongoDB
-// mongoose.connect("mongodb://localhost/MeanMapApp");
+mongoose.connect("mongodb://localhost/MeanMapApp");
 
 //works
-mongoose.connect("mongodb://kjh311:kevkev@jello.modulusmongo.net:27017/ypu2mutI");
+//Modulus API
+// mongoose.connect("mongodb://kjh311:kevkev@jello.modulusmongo.net:27017/ypu2mutI");
 
 
 // Logging and Parsing

@@ -154,7 +154,7 @@ window.onload = function (){
     longy = $scope.formData.longitude = parseFloat(coords.long).toFixed(3);
     laty = $scope.formData.latitude = parseFloat(coords.lat).toFixed(3);
     geolatlong = laty + "," + longy;
-    console.log("coords are " + laty + "," + longy);
+    console.log("Your coords are " + laty + "," + longy);
     // Display message confirming that the coordinates verified.
     $scope.formData.htmlverified = "Yep (Thanks for giving us real data!)";
 
@@ -226,7 +226,11 @@ window.onload = function (){
 // settimeout to give time to add to DB before refresh
 setTimeout(function(){
 gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
-}, 200);
+}, 500);
     };
+
+
+
+
 
 });
